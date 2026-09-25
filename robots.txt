@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://karernyi-strateg.hrexpert63.ru/sitemap.xml
