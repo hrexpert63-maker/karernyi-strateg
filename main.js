@@ -38,6 +38,14 @@
   tabs('.tab', 'data-tab', 'data-panel');
   tabs('.mod-tab', 'data-mod', 'data-modpanel');
 
+  /* «Как решаем» links open the matching module */
+  $$('[data-mod-link]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      var t = $('.mod-tab[data-mod="' + a.getAttribute('data-mod-link') + '"]');
+      if (t) t.click();
+    });
+  });
+
   /* USP cards: hover on desktop, tap on touch */
   var usps = $$('.usp');
   usps.forEach(function (u) {
@@ -194,7 +202,7 @@
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
         'Имя': f.name.value.trim(), 'Контакт': f.contact.value.trim(), 'Деятельность': f.role.value || '—',
-        'Тариф': f.plan.value || '—', 'Страница': location.href,
+        'Тариф': f.plan.value || '—', 'Согласие на рассылку': f.news.checked ? 'да' : 'нет', 'Страница': location.href,
         _subject: 'Заявка на «Карьерный стратег»: ' + f.name.value.trim(), _template: 'table', _captcha: 'false'
       })
     }).then(function (r) { return r.json(); }).then(function (j) {
