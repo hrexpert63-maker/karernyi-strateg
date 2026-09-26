@@ -515,3 +515,18 @@ h1,h2,h3,p{margin:0}
 /* form: separate consents */
 .form__policy{font-size:12px;color:var(--mute2)}
 .btn-pill--wrap{white-space:normal}
+
+/* CTA strips, cases, AKKS */
+.cta-strip{margin-top:clamp(32px,4vw,56px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px;border-top:1px solid var(--line);padding-top:24px}
+.cta-strip p{font-size:16px;color:var(--mute3);max-width:620px}
+.sec--dark .cta-strip{border-color:var(--line-d)}
+.sec--dark .cta-strip p{color:var(--on-d1)}
+.cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px;margin-top:12px}
+.case{background:var(--dark2);border:1px solid var(--line-d);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.case__seg{align-self:flex-start;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.case h3{font-family:var(--head);font-weight:600;font-size:21px;line-height:1.2;letter-spacing:-.01em}
+.case p{font-size:14.5px;color:var(--on-d1);text-wrap:pretty}
+.case b{color:var(--paper)}
+.akks-img{width:150px;height:auto;background:#fff;border-radius:16px;padding:10px 14px}
+.plan__diff{font-size:13px;color:var(--gold2)}
+.reviews__actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
