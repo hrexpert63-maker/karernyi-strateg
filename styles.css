@@ -530,3 +530,6 @@ h1,h2,h3,p{margin:0}
 .akks-img{width:150px;height:auto;background:#fff;border-radius:16px;padding:10px 14px}
 .plan__diff{font-size:13px;color:var(--gold2)}
 .reviews__actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.plan__ask{align-self:center;font-size:14px;font-weight:600;margin-top:-8px}
+.plan__ask--dark{color:var(--gold2)}
+.plan__ask--dark:hover{color:var(--paper)}
