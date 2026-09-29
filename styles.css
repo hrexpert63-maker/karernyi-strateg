@@ -542,3 +542,5 @@ h1,h2,h3,p{margin:0}
 .review--photo .scene{border-radius:0}
 .apply .scene{max-width:420px;aspect-ratio:auto;height:clamp(200px,18vw,280px)}
 @media (max-width:700px){.scene--wide{height:240px}}
+.review--photo .scene{aspect-ratio:auto;height:auto;object-position:50% 20%}
+.apply .scene{object-position:50% 30%}
