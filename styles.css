@@ -534,10 +534,10 @@ h1,h2,h3,p{margin:0}
 .plan__ask--dark{color:var(--gold2)}
 .plan__ask--dark:hover{color:var(--paper)}
 
-/* community gallery */
-.gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-.gallery img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:18px}
-@media (max-width:900px){
-  .gallery{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:62%;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(-1*var(--gut));padding:0 var(--gut) 6px}
-  .gallery img{scroll-snap-align:start}
-}
+/* photos placed in context */
+.scene{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:22px}
+.scene--wide{aspect-ratio:16/7}
+.review--photo{padding:0;overflow:hidden}
+.review--photo .scene{border-radius:0}
+.apply .scene{max-width:480px}
+@media (max-width:700px){.scene--wide{aspect-ratio:4/3}}
