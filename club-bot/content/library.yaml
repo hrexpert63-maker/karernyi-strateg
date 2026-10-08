@@ -1,0 +1,18 @@
+# Библиотека клуба. Бот рекомендует ТОЛЬКО то, что есть в этом файле, и ничего не выдумывает.
+# Заголовки с двоеточием берите в кавычки: title: "Тема: подтема"
+# type: article | video | book | template | tool | recording
+# level: base | advanced
+- id: holland-code
+  title: "Код Голланда: как читать результаты"
+  type: article
+  url: https://example.com/holland
+  topics: [диагностика, профориентация]
+  level: base
+  summary: Короткий разбор шести типов и того, как не превратить результат в ярлык.
+- id: first-session-checklist
+  title: "Чек-лист первой сессии с клиентом"
+  type: template
+  url: https://example.com/checklist
+  topics: [консультирование, практика]
+  level: base
+  summary: Что сделать до, во время и после первой встречи.
