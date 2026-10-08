@@ -14,8 +14,53 @@ def _load(name: str) -> list[dict]:
     return yaml.safe_load((BASE / "content" / name).read_text(encoding="utf-8")) or []
 
 
+INDEX_FILE = BASE / "data" / "library.json"
+
+
+def _indexed() -> dict:
+    try:
+        return json.loads(INDEX_FILE.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
 def library() -> list[dict]:
-    return _load("library.yaml")
+    """Ручные материалы из library.yaml + видео, проиндексированные из чата клуба."""
+    return _load("library.yaml") + list(_indexed().values())
+
+
+def upsert_video(item: dict) -> bool:
+    """Добавляет или обновляет видео. Ручное описание (/describe) не затираем подписью. True - если новое."""
+    idx = _indexed()
+    old = idx.get(item["id"])
+    if old and old.get("manual"):
+        item["summary"], item["topics"], item["manual"] = old["summary"], old["topics"], True
+    idx[item["id"]] = item
+    INDEX_FILE.parent.mkdir(exist_ok=True)
+    INDEX_FILE.write_text(json.dumps(idx, ensure_ascii=False, indent=1), encoding="utf-8")
+    return old is None
+
+
+def describe(item_id: str, summary: str, topics: list[str] | None = None) -> bool:
+    idx = _indexed()
+    if item_id not in idx:
+        return False
+    idx[item_id]["summary"], idx[item_id]["manual"] = summary, True
+    if topics is not None:
+        idx[item_id]["topics"] = topics
+    INDEX_FILE.write_text(json.dumps(idx, ensure_ascii=False, indent=1), encoding="utf-8")
+    return True
+
+
+def video_item(chat_id: int, msg_id: int, caption: str, file_name: str, duration: int, date: datetime) -> dict:
+    """Ссылка t.me/c/... работает для участников супергруппы."""
+    lines = [l.strip() for l in (caption or "").strip().splitlines() if l.strip()]
+    title = lines[0][:120] if lines else (file_name or f"Видео от {date:%d.%m.%Y}")
+    internal = str(chat_id).removeprefix("-100")
+    return {"id": f"tg-{msg_id}", "title": title, "type": "video", "level": "base",
+            "url": f"https://t.me/c/{internal}/{msg_id}", "topics": [],
+            "summary": " ".join(lines[1:])[:600] if len(lines) > 1 else "",
+            "duration_min": round(duration / 60) if duration else None, "date": date.strftime("%Y-%m-%d")}
 
 
 def meetings() -> list[dict]:
@@ -31,8 +76,10 @@ def meeting(meeting_id: str) -> dict | None:
 
 
 def format_item(i: dict) -> str:
-    return (f"[{i['id']}] {i['title']} ({i['type']}, {i.get('level', 'base')})\n"
-            f"  темы: {', '.join(i.get('topics', []))}\n  {i.get('summary', '')}\n  {i['url']}")
+    dur = f", {i['duration_min']} мин" if i.get("duration_min") else ""
+    return (f"[{i['id']}] {i['title']} ({i['type']}{dur})\n"
+            f"  темы: {', '.join(i.get('topics', [])) or 'не указаны'}\n"
+            f"  описание: {i.get('summary') or 'нет - опирайся только на название'}\n  {i['url']}")
 
 
 def format_library(items: list[dict] | None = None) -> str:

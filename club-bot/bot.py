@@ -31,6 +31,7 @@ CLUB_CHAT = int(os.environ["CLUB_CHAT_ID"])
 TOPIC = int(os.getenv("CLUB_TOPIC_ID") or 0) or None
 AUTO_PUBLISH = os.getenv("AUTO_PUBLISH", "false").lower() == "true"
 TG_LIMIT = 4096
+LIB_TOPIC = int(os.getenv("LIBRARY_TOPIC_ID") or 0) or None  # если библиотека - отдельная тема чата
 
 bot = Bot(os.environ["BOT_TOKEN"])
 dp = Dispatcher()
@@ -74,7 +75,8 @@ async def help_cmd(m: Message):
            "из библиотеки клуба. /library - вся библиотека.")
     if is_admin(m):
         txt += ("\n\nАдмин:\n/meetings - список встреч\n/announce <id> - анонс\n/summary <id> - саммари\n"
-                "/digest - отсылка к библиотеке\nОтвет на черновик = правки.")
+                "/digest - отсылка к библиотеке\n/missing - видео без описания\n/describe <id> текст | темы - описать видео\n"
+                "В чате: ответьте /add на старое видео, чтобы добавить его в библиотеку.\nОтвет на черновик = правки.")
     await m.answer(txt)
 
 
@@ -205,6 +207,64 @@ async def guide_cmd(m: Message, command: CommandObject):
     q = command.args[:500]
     text = await llm.write(prompts.GUIDE.format(query=f"<запрос>{q}</запрос>", library=content.format_library()))
     await m.answer(text[:TG_LIMIT], disable_web_page_preview=True)
+
+
+async def index_video(m: Message, notify: bool = True) -> None:
+    media = m.video or (m.document if (m.document and (m.document.mime_type or "").startswith("video/")) else None)
+    if not media:
+        return
+    item = content.video_item(m.chat.id, m.message_id, m.caption or "",
+                              getattr(media, "file_name", None) or "", media.duration if m.video else 0,
+                              m.date)
+    if content.upsert_video(item) and notify:
+        hint = "" if item["summary"] else "\nОписания нет - подбор будет опираться только на название. "
+        for a in ADMINS:
+            await bot.send_message(a, f"В библиотеку добавлено: {item['title']}\n{item['url']}{hint}"
+                                      f"\nУлучшить: /describe {item['id']} о чём видео | тема1, тема2",
+                                   disable_web_page_preview=True)
+
+
+def _in_library(m: Message) -> bool:
+    return m.chat.id == CLUB_CHAT and (LIB_TOPIC is None or m.message_thread_id == LIB_TOPIC)
+
+
+@dp.message(F.chat.id == CLUB_CHAT, F.video | F.document)
+async def on_chat_video(m: Message):
+    if _in_library(m):
+        await index_video(m)
+
+
+@dp.edited_message(F.chat.id == CLUB_CHAT, F.video | F.document)
+async def on_chat_video_edit(m: Message):
+    if _in_library(m):  # подпись поправили - обновляем описание
+        await index_video(m, notify=False)
+
+
+@dp.message(Command("add"), F.chat.id == CLUB_CHAT)
+async def add_cmd(m: Message):
+    """Ответьте /add на старое видео в чате, чтобы добавить его в библиотеку."""
+    if is_admin(m) and m.reply_to_message:
+        await index_video(m.reply_to_message)
+
+
+@dp.message(Command("describe"), F.chat.type == "private")
+async def describe_cmd(m: Message, command: CommandObject):
+    if not is_admin(m):
+        return
+    try:
+        item_id, rest = (command.args or "").split(maxsplit=1)
+        summary, _, topics = rest.partition("|")
+        ok = content.describe(item_id, summary.strip(), [t.strip() for t in topics.split(",") if t.strip()] or None)
+    except ValueError:
+        return await m.answer("Формат: /describe tg-123 о чём видео | тема1, тема2")
+    await m.answer("Обновил." if ok else "Не нашёл такое видео (/missing покажет список).")
+
+
+@dp.message(Command("missing"), F.chat.type == "private")
+async def missing_cmd(m: Message):
+    if is_admin(m):
+        miss = [i for i in content.library() if not i.get("summary")]
+        await m.answer("\n".join(f"{i['id']} - {i['title']}" for i in miss)[:TG_LIMIT] or "У всех есть описание 👍")
 
 
 async def tick():
