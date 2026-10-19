@@ -300,6 +300,8 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 .plan ul{margin:22px 0 26px;display:flex;flex-direction:column;gap:11px;flex:1}
 .plan li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:16px}
 .plan li svg{margin-top:4px;color:var(--teal)}
+.tar__docs{margin-top:24px;color:var(--mute);font-size:14px;max-width:65ch}
+.tar__docs a{color:var(--link)}
 .tar__note{margin-top:28px;color:var(--mute);max-width:65ch}
 .tar__note b{color:var(--ink);font-weight:500}
 .seats{display:none;margin-top:12px;text-align:center;font-size:15px;font-weight:600;color:var(--ink)}
@@ -318,6 +320,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 /* ───── отзыв ───── */
 .rev__grid{margin-top:clamp(28px,4vw,48px);display:grid;gap:20px;grid-template-columns:1fr;align-items:start}
 @media(min-width:760px){.rev__grid{grid-template-columns:1fr 1fr;gap:28px}}
+@media(min-width:1060px){.rev__grid{grid-template-columns:1fr 1fr 1fr}}
 .rev__grid figure{margin:0;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 60px -40px rgba(14,33,31,.4)}
 .rev__grid img{width:100%;height:auto}
 .rev__note{margin-top:22px;color:var(--mute);font-size:15px;max-width:65ch}
@@ -519,7 +522,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
   <div class="wrap">
     <h2 id="h-mech">С той стороны экрана</h2>
     <figure class="ph">
-      <img src="https://cdn.gamma.app/f2etv6mzt3jbknl/design-anything/hTVBTvGbMIvvn7H8NprUM/r8k5ZxFDbtbNrrVGRPNft.jpg" width="1376" height="768" alt="HR-специалист за компьютером листает отклики на сайте вакансий" loading="lazy" decoding="async">
+      <img src="img/hr-screen.webp" width="1024" height="572" alt="HR-специалист за компьютером листает отклики на сайте вакансий" loading="lazy" decoding="async">
 <figcaption>Так выглядит ваш отклик для эйчара: один из сотен, на экране, за секунды</figcaption>
     </figure>
     <div class="flow" aria-label="Схема: ваш отклик, экран эйчара, разбор и правки">
@@ -623,6 +626,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
         <p class="seats" data-seats="pro"></p>
       </article>
     </div>
+    <p class="tar__docs">Нажимая «Записаться», вы принимаете условия: <a href="https://karernyi-strateg.hrexpert63.ru/oferta.html" target="_blank" rel="noopener">Договор-оферта</a>, <a href="https://karernyi-strateg.hrexpert63.ru/privacy.html" target="_blank" rel="noopener">Политика обработки персональных данных</a>, <a href="https://karernyi-strateg.hrexpert63.ru/soglasie.html" target="_blank" rel="noopener">Согласие на обработку персональных данных</a>.</p>
     <p class="tar__note"><b>Мест мало,</b> потому что каждый отклик я разбираю лично.</p>
   </div>
 </section>
@@ -650,14 +654,12 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 <!-- 8а. ОТЗЫВ -->
 <section class="sec rev" id="reviews" aria-labelledby="h-rev">
   <div class="wrap">
-    <p class="eyebrow">Из личной переписки</p>
     <h2 id="h-rev">Что получается после правок резюме на hh</h2>
-    <p class="lead" style="margin-top:18px">Сообщения человека, который исправил резюме на hh по моим рекомендациям. Это не отзыв об этом мастер-классе, а пример того, как правки влияют на видимость.</p>
     <div class="rev__grid">
       <figure><img src="img/review-1.webp" width="540" height="426" alt="Сообщение: после правок резюме выросла конверсия на hh, работодатели нашли сами" loading="lazy" decoding="async"></figure>
       <figure><img src="img/review-2.webp" width="522" height="266" alt="Сообщение: 5–7 просмотров резюме в неделю, 4 компании пришли сами с hh" loading="lazy" decoding="async"></figure>
+      <figure><img src="img/review-3.webp" width="600" height="154" alt="Сообщение: 2 отклика из 5 резюме, иду по шагам вашего модуля" loading="lazy" decoding="async"></figure>
     </div>
-    <p class="rev__note">Опубликовано анонимно с согласия автора. Результат у каждого свой, приглашений на собеседования я не обещаю.</p>
   </div>
 </section>
 
@@ -719,9 +721,9 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
   <div class="foot__in">
     <div>ИП Мягченкова Анастасия Владимировна · г. Самара · ИНН 631229128657 · ОГРНИП 324632700114710</div>
     <nav aria-label="Документы">
-      <a href="oferta.html">Договор-оферта</a>
-      <a href="privacy.html">Политика обработки персональных данных</a>
-      <a href="soglasie.html">Согласие на обработку персональных данных</a>
+      <a href="https://karernyi-strateg.hrexpert63.ru/oferta.html" target="_blank" rel="noopener">Договор-оферта</a>
+      <a href="https://karernyi-strateg.hrexpert63.ru/privacy.html" target="_blank" rel="noopener">Политика обработки персональных данных</a>
+      <a href="https://karernyi-strateg.hrexpert63.ru/soglasie.html" target="_blank" rel="noopener">Согласие на обработку персональных данных</a>
     </nav>
     <div>Вопросы: <a href="https://t.me/hrexpert63" rel="noopener">Telegram @hrexpert63</a> · <a href="mailto:hrexpert63@gmail.com">hrexpert63@gmail.com</a></div>
     <div>Мастер-класс не является продуктом или партнёрской программой hh.ru. Вакансия на мастер-классе учебная, найм по ней не ведётся.</div>
@@ -735,7 +737,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
   /* ───── настройки: заполнить перед запуском ───── */
   var CONFIG = {
     // ссылки на оплату в GetCourse (пока пусто — кнопки ведут в личку автору)
-    pay: { base: '', pro: '' },
+    pay: { base: 'https://payform.ru/krcPToj/', pro: 'https://payform.ru/prcPTqY/' },
     fallback: 'https://t.me/hrexpert63',
     // реальный остаток мест, обновляется вручную; null — не показывать
     seats: { base: null, pro: 5 },
