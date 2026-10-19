@@ -104,17 +104,14 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 .pain__end p.big u{text-decoration:none;border-bottom:3px solid var(--hh);padding-bottom:1px}
 
 
-/* ноутбук полубоком */
-.lapwrap{width:100%;max-width:660px;margin:0 auto;container-type:inline-size;perspective:1500px;perspective-origin:50% 30%;padding:2cqw 0 6cqw}
-.lap{transform-style:preserve-3d;transform:rotateY(-26deg) rotateX(-3deg) rotateZ(0);transform-origin:50% 55%;position:relative}
-.lap__lid{position:relative;padding:2.6cqw 2.6cqw 3cqw;background:#0B0B0D;border:2px solid #2B2B30;border-radius:2cqw 2cqw .5cqw .5cqw;box-shadow:0 0 0 1px #3a3a40 inset}
-.lap__lid::before{content:"";position:absolute;top:1cqw;left:50%;width:.8cqw;height:.8cqw;margin-left:-.4cqw;border-radius:50%;background:#26262B}
-.lap__base{height:34cqw;transform-origin:50% 0;transform:rotateX(78deg);background:linear-gradient(#D9DBE0,#B3B6BD 70%,#9A9DA5);border-radius:0 0 3cqw 3cqw;margin:0 -3%;box-shadow:inset 0 2px 0 #f2f3f5,0 30px 40px -10px rgba(0,0,0,.6);position:relative}
-.lap__base::before{content:"";position:absolute;left:8%;right:8%;top:12%;height:44%;border-radius:1cqw;background:repeating-linear-gradient(90deg,#8E9199 0 4%,#B9BCC3 4% 5%),#999;opacity:.5}
-.lap__base::after{content:"";position:absolute;left:34%;right:34%;bottom:10%;height:20%;border-radius:1cqw;background:#C6C9CF;box-shadow:inset 0 0 0 1px #a9acb4}
-@media(max-width:600px){.lap{transform:rotateY(-18deg) rotateX(-2deg)}}
-.hh{position:relative;aspect-ratio:16/10.4;overflow:hidden;border-radius:.5cqw;background:#fff;color:#16181D;font:400 max(7.5px,1.85cqw)/1.35 'Golos Text',sans-serif}
-.hh__top{display:flex;align-items:center;gap:.8em;padding:.7em 1em;border-bottom:1px solid #E7E9EE}
+/* ноутбук: отклик → автоотказ */
+.lap{width:100%;max-width:640px;margin:0 auto;container-type:inline-size}
+.lap__lid{position:relative;padding:3cqw 3cqw 3.4cqw;background:#0B0B0D;border:2px solid #2B2B30;border-radius:2.4cqw 2.4cqw .6cqw .6cqw;box-shadow:0 40px 80px -36px rgba(214,0,28,.6)}
+.lap__lid::before{content:"";position:absolute;top:1.1cqw;left:50%;width:.9cqw;height:.9cqw;margin-left:-.45cqw;border-radius:50%;background:#26262B}
+.lap__base{height:2.4cqw;margin:0 -3%;background:linear-gradient(#D5D7DC,#8B8E96);border-radius:0 0 2.6cqw 2.6cqw;position:relative}
+.lap__base::after{content:"";position:absolute;top:0;left:50%;width:14%;height:.8cqw;margin-left:-7%;background:#A7AAB2;border-radius:0 0 1cqw 1cqw}
+.hh{position:relative;aspect-ratio:16/10.4;overflow:hidden;border-radius:.5cqw;background:#fff;color:#16181D;font:400 max(8px,2cqw)/1.35 'Golos Text',sans-serif}
+.hh__top{display:flex;align-items:center;gap:.55em;padding:.7em .9em;border-bottom:1px solid #E7E9EE}
 .hh__logo{width:2.7em;height:2.7em;border-radius:50%}
 .hh__tg{white-space:nowrap;display:flex;padding:.2em;border-radius:.9em;background:#EEF0F4;font-size:.92em}
 .hh__tg b{padding:.5em 1.2em;border-radius:.7em;background:#fff;font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,.08)}
@@ -122,7 +119,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 .hh__nav{font-size:.95em;font-weight:500}
 .hh__sp{flex:1}
 .hh__login{padding:.55em 1em;border-radius:.8em;background:#EEF0F4;font-weight:600;font-size:.92em}
-.hh__cr{flex:none;padding:.55em 1em;border-radius:.8em;background:#000;color:#fff;font-weight:600;font-size:.92em;white-space:nowrap}
+.hh__cr{padding:.55em 1em;border-radius:.8em;background:#000;color:#fff;font-weight:600;font-size:.92em;white-space:nowrap}
 .hh__body{display:grid;grid-template-columns:1.7fr 1fr;gap:.9em;padding:1em}
 .hh__card,.hh__side{border:1px solid #E7E9EE;border-radius:1.2em;padding:1.1em 1.2em}
 .hh__t{font:700 1.85em/1.15 var(--head);letter-spacing:-.01em}
@@ -145,7 +142,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 .t2 b{font:700 1.35em/1.2 var(--head)}
 .t2 span{font-size:.9em;opacity:.92}
 .cur{position:absolute;left:62%;top:58%;width:2.4em;height:2.4em;filter:drop-shadow(0 2px 3px rgba(0,0,0,.35));pointer-events:none;z-index:2}
-@container (max-width:440px){.hh__nav,.hh__login,.hh__side{display:none}.hh__body{grid-template-columns:1fr}.hh__top{gap:.6em}}
+@container (max-width:470px){.hh__nav,.hh__login,.hh__side{display:none}.hh__body{grid-template-columns:1fr}.hh__top{gap:.6em}}
 /* без анимации (reduce) — финальный кадр сразу виден */
 .t2{opacity:1}
 @media(prefers-reduced-motion:no-preference){
@@ -158,13 +155,17 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 @keyframes b1{0%,34%{background:#0A6BFF}36%,100%{background:#0852C4}}
 @keyframes t1{0%,36%{opacity:0;transform:translateY(8px)}40%,52%{opacity:1;transform:none}56%,100%{opacity:0}}
 @keyframes t2{0%,56%{opacity:0;transform:translateY(8px)}62%,92%{opacity:1;transform:none}98%,100%{opacity:0}}
+.lapwrap{width:100%}
 .pain__end p.pain__sub{font:400 clamp(16px,2vw,19px)/1.5 "Golos Text",sans-serif;margin-top:18px;color:#C9B9BB;max-width:52ch}
 .why-tags{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px;max-width:980px}
 .why-tags li{padding:9px 15px;border-radius:999px;border:1px solid #5A1B24;background:rgba(214,0,28,.12);color:#FFD9DD;font-size:15px;line-height:1.35}
 
 /* ───── мост: боль → спокойствие ───── */
 .stitch{background:linear-gradient(180deg,var(--night) 0%,#2B0A10 22%,#10201E 62%,var(--bg) 100%);padding:clamp(88px,12vw,160px) var(--gut) clamp(180px,26vw,360px)}
-.stitch__in{max-width:1180px;margin:0 auto}
+.stitch{position:relative;overflow:hidden}
+.stitch::before{content:"";position:absolute;right:-6%;top:8%;width:min(82vw,880px);aspect-ratio:1255/750;background:url(img/hh-candidates.webp) center/cover no-repeat;filter:blur(3px) grayscale(.55) brightness(.5) contrast(1.1);opacity:.55;transform:perspective(1400px) rotateY(-18deg) rotateX(6deg) rotate(-3deg);border-radius:18px;-webkit-mask-image:linear-gradient(180deg,#000 0,#000 55%,transparent 100%);mask-image:linear-gradient(180deg,#000 0,#000 55%,transparent 100%);pointer-events:none}
+.stitch::after{content:"";position:absolute;inset:0;background:radial-gradient(50% 45% at 80% 28%,rgba(214,0,28,.28),transparent 70%),linear-gradient(90deg,rgba(11,6,7,.85) 0,rgba(11,6,7,.25) 55%,transparent 100%);pointer-events:none}
+.stitch__in{position:relative;z-index:1;max-width:1180px;margin:0 auto}
 .stitch__a{font:600 clamp(32px,6vw,72px)/1.08 var(--head);letter-spacing:-.015em;color:var(--hh-bright);max-width:16ch}
 .stitch__b{margin-top:clamp(20px,3vw,32px);font:500 clamp(22px,3.4vw,40px)/1.3 var(--head);color:#E6EDEB;max-width:26ch}
 
@@ -219,9 +220,6 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 .mech h2{max-width:18ch}
 .ph{margin:clamp(28px,4vw,48px) 0 0;border-radius:22px;overflow:hidden;background:linear-gradient(135deg,#E6E2D6,#CFD8D4);position:relative;aspect-ratio:16/9}
 .ph>img{width:100%;height:100%;object-fit:cover}
-.ph__mon{position:absolute;right:4%;bottom:15%;width:clamp(150px,44%,460px);border-radius:8px;background:#111;padding:6px 6px 8px;border:2px solid #24262B;box-shadow:0 24px 50px -14px rgba(0,0,0,.65)}
-.ph__bar{display:flex;gap:4px;padding:0 2px 5px}.ph__bar i{width:6px;height:6px;border-radius:50%;background:#3a3c42}
-.ph__mon img{width:100%;height:auto;border-radius:3px;display:block}
 .ph figcaption{position:absolute;left:0;right:0;bottom:0;padding:48px 22px 18px;background:linear-gradient(transparent,rgba(8,14,13,.78));color:#fff;font-size:15px;line-height:1.4}
 .flow{margin-top:clamp(32px,5vw,56px);display:flex;flex-direction:column;align-items:stretch;gap:0}
 .node{padding:22px 24px;border-radius:18px;border:1px solid var(--line);background:var(--card);text-align:center;font:600 18px/1.3 var(--head)}
@@ -249,7 +247,6 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 /* ───── 5. РЕНТГЕН ───── */
 .xray{background:var(--bg2)}
 .xray h2{max-width:16ch}
-.shot--v{margin-top:clamp(28px,4vw,48px);max-width:820px}
 .xray__grid{margin-top:clamp(32px,5vw,56px);display:grid;gap:clamp(28px,4vw,56px);grid-template-columns:1fr}
 @media(min-width:960px){.xray__grid{grid-template-columns:1.15fr .85fr;align-items:start}}
 .list{border-radius:22px;background:var(--card);border:1px solid var(--line);padding:18px;display:flex;flex-direction:column;gap:10px;box-shadow:0 40px 80px -44px rgba(14,33,31,.4)}
@@ -366,9 +363,9 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 <body>
 
 <!-- 0. Шапка -->
-<header class="top">
+<header class="top" id="top">
   <div class="top__in">
-    <a class="brand" href="./" aria-label="Академия карьеры">
+    <a class="brand" href="#top" aria-label="Академия карьеры, наверх страницы">
       <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="11" fill="#fff"/><circle cx="15" cy="15" r="13.4" fill="none" stroke="#C9A227" stroke-width="1.2"/></svg>
       Академия карьеры
     </a>
@@ -474,12 +471,12 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 <section class="sec offer" id="offer" aria-labelledby="h-offer">
   <div class="wrap offer__in">
     <div>
-      <p class="eyebrow">Мастер-класс · 31 октября · онлайн</p>
+      <p class="eyebrow">Мастер-класс · 31 октября · 11:00 мск · онлайн</p>
       <h2 class="title" id="h-offer">Достучаться <span class="nw">до&nbsp;<img class="ttl-hh" src="img/hh-logo.webp" width="80" height="80" alt="hh"></span></h2>
       <p class="sub">Покажу, что эйчар видит вместо вашего отклика</p>
       <p class="txt">Правила закрыты, как в лотерее. Вы отправляете отклик и не знаете, что с ним происходит. На мастер-классе вы откликнетесь на вакансию под вашу должность, а я покажу, как этот отклик выглядит на экране работодателя, почему на него молчат и что поменять.</p>
       <ul class="facts">
-        <li>31 октября, живая встреча</li>
+        <li>31 октября, 11:00 мск, живая встреча</li>
         <li>Запись встречи включена</li>
         <li>Разбор вашего отклика от 5&nbsp;900&nbsp;₽</li>
       </ul>
@@ -512,8 +509,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
     <h2 id="h-mech">С той стороны экрана</h2>
     <figure class="ph">
       <img src="https://cdn.gamma.app/f2etv6mzt3jbknl/design-anything/hTVBTvGbMIvvn7H8NprUM/r8k5ZxFDbtbNrrVGRPNft.jpg" width="1376" height="768" alt="HR-специалист за компьютером листает отклики на сайте вакансий" loading="lazy" decoding="async">
-      <div class="ph__mon"><div class="ph__bar"><i></i><i></i><i></i></div><img src="img/hh-candidates.webp" width="1100" height="657" alt="Список откликов на hh на мониторе эйчара" loading="lazy" decoding="async"></div>
-      <figcaption>Так выглядит ваш отклик для эйчара: один из сотен, на экране, за секунды</figcaption>
+<figcaption>Так выглядит ваш отклик для эйчара: один из сотен, на экране, за секунды</figcaption>
     </figure>
     <div class="flow" aria-label="Схема: ваш отклик, экран эйчара, разбор и правки">
       <div class="node">Ваш отклик<small>на учебную вакансию</small></div>
@@ -526,7 +522,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
       <li><span class="d">Сразу после оплаты</span><p><b>Вы заполняете анкету:</b> должность, отрасль, резюме, зарплатные ожидания.</p></li>
       <li><span class="d">После анкеты</span><p><b>Я публикую учебную вакансию</b> под вашу должность (в базовом тарифе — под ваше направление, в персональном — под точную). Найм по ней не ведётся.</p></li>
       <li><span class="d">Ваш шаг</span><p><b>Вы откликаетесь</b> со своим сопроводительным, как на обычную вакансию.</p></li>
-      <li><span class="d">31 октября</span><p><b>Живая встреча.</b> Присылаю вам отчёт со скринами, разбираю типичные ошибки на обезличенных примерах и отвечаю на ваши вопросы.</p></li>
+      <li><span class="d">31 октября, 11:00 мск</span><p><b>Живая встреча.</b> Присылаю вам отчёт со скринами, разбираю типичные ошибки на обезличенных примерах и отвечаю на ваши вопросы.</p></li>
     </ol>
     <p class="note">Вакансия учебная: найм по ней не ведётся, вы откликаетесь осознанно, чтобы увидеть свой отклик глазами работодателя.</p>
   </div>
@@ -536,11 +532,6 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 <section class="sec xray" id="xray" aria-labelledby="h-xray">
   <div class="wrap">
     <h2 id="h-xray">Отклик под рентгеном</h2>
-    <figure class="shot shot--v">
-      <div class="shot__bar"><i></i><i></i><i></i><span>hh.ru / вакансия в кабинете работодателя</span></div>
-      <img src="img/hh-vacancy.webp" width="1000" height="587" alt="Живая вакансия в кабинете работодателя на hh" loading="lazy" decoding="async">
-      <figcaption>Живая вакансия в кабинете работодателя: именно здесь эйчар видит отклики</figcaption>
-    </figure>
     <div class="xray__grid">
       <div class="list" aria-label="Стилизованный список откликов, один открыт и помечен тремя отметками">
         <div class="list__top"><img src="img/hh-logo.webp" width="80" height="80" alt=""><span>Отклики на вакансию</span></div>
@@ -598,7 +589,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
           <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Отклик на учебную вакансию вашего направления</li>
           <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Скрины из интерфейса работодателя</li>
           <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Письменный разбор</li>
-          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Живая встреча 31 октября и запись</li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Живая встреча 31 октября в 11:00 мск и запись</li>
         </ul>
         <a class="btn btn--block" href="#" data-pay="base" data-goal="tariff_base">Записаться за 5&nbsp;900&nbsp;₽</a>
         <p class="seats" data-seats="base"></p>
@@ -610,8 +601,8 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
         <p class="for">Для узкой специализации, руководителей и тех, кому нужен детальный разбор профиля и точечные рекомендации.</p>
         <ul>
           <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Всё из базового</li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Живая встреча 31 октября в 11:00 мск</li>
           <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Учебная вакансия под вашу точную должность и отрасль</li>
-          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Голосовой разбор от меня на 5–7 минут</li>
           <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Повторный отклик после правок в течение 48 часов</li>
           <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg><span><b>Подробный отчёт:</b> ключевые слова и полный разбор вашего профиля на hh — что улучшить, чтобы повысить видимость и конверсию</span></li>
           <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Точечные рекомендации по каждому разделу профиля</li>
@@ -679,7 +670,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
       <details><summary>Мне будут приукрашивать опыт?</summary><p>Нет. Правки только по фактам: формулировки, порядок, акценты. Чего не было в вашем опыте, в отклике не появится.</p></details>
       <details><summary>Что с моими данными?</summary><p>Резюме и отклик видите только вы и я. Примеры на встрече обезличиваю и показываю только с вашего согласия.</p></details>
       <details><summary>Не смогу быть на встрече 31 октября.</summary><p>Запись придёт вам после встречи, а личный разбор вы получите в любом случае.</p></details>
-      <details><summary>Чем отличаются тарифы?</summary><p>В базовом вы откликаетесь на вакансию вашего направления. В персональном я публикую вакансию под вашу точную должность, записываю голосовой разбор, проверяю отклик ещё раз после правок и готовлю подробный отчёт: ключевые слова, полный разбор вашего профиля на hh и точечные рекомендации, что улучшить для видимости и конверсии. Мест в персональном тарифе — 5.</p></details>
+      <details><summary>Чем отличаются тарифы?</summary><p>В базовом вы откликаетесь на вакансию вашего направления. В персональном я публикую вакансию под вашу точную должность, проверяю отклик ещё раз после правок и готовлю подробный отчёт: ключевые слова, полный разбор вашего профиля на hh и точечные рекомендации, что улучшить для видимости и конверсии. Мест в персональном тарифе — 5.</p></details>
       <details><summary>У меня нестандартная должность, подойдёт ли?</summary><p>Тогда берите персональный тариф: вакансия будет под вашу точную роль.</p></details>
     </div>
   </div>
