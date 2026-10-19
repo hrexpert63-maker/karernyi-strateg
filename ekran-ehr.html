@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Экран эйчара — мастер-класс Анастасии Мягченковой</title>
+<meta name="description" content="Правила закрыты, как в лотерее: вы отправляете отклик и не знаете, что с ним происходит. На МК вы откликнетесь на вакансию под вашу должность, а я покажу, как этот отклик выглядит на экране работодателя, почему на него молчат и что поменять.">
+<link rel="canonical" href="https://karernyi-strateg.hrexpert63.ru/ekran-ehr.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0B0607">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Академия карьеры">
+<meta property="og:title" content="Экран эйчара">
+<meta property="og:description" content="Правила закрыты, как в лотерее: вы отправляете отклик и не знаете, что с ним происходит. На МК вы откликнетесь на вакансию под вашу должность, а я покажу, как этот отклик выглядит на экране работодателя, почему на него молчат и что поменять.">
+<meta property="og:url" content="https://karernyi-strateg.hrexpert63.ru/ekran-ehr.html">
+<meta property="og:image" content="https://karernyi-strateg.hrexpert63.ru/img/og-ekran-ehr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" as="font" type="font/woff2" href="fonts/exo2-cyrillic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/golostext-cyrillic.woff2" crossorigin>
+
+<script>document.documentElement.classList.add('js')</script>
+<style>
+@font-face{font-family:'Exo 2';font-style:normal;font-weight:500 800;font-display:swap;src:url(fonts/exo2-cyrillic.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Exo 2';font-style:normal;font-weight:500 800;font-display:swap;src:url(fonts/exo2-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:400 600;font-display:swap;src:url(fonts/golostext-cyrillic.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:400 600;font-display:swap;src:url(fonts/golostext-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+:root{
+  /* боль — красный hh */
+  --hh:#D6001C; --hh-bright:#FF4258; --hh-deep:#7A0010; --night:#0B0607; --night2:#1A0E10;
+  /* оффер — спокойная палитра бренда */
+  --teal:#17756A; --teal-d:#0E211F; --teal-d2:#14302C; --gold:#C9A227; --gold2:#E7C766;
+  /* тема светлых секций */
+  --bg:#FAF9F6; --bg2:#F2F0E9; --card:#FFFFFF; --ink:#1C1C1E; --mute:#555D5B; --line:#DDD9CE;
+  --link:#17756A; --btn:#17756A; --btn-t:#FFFFFF; --pain:#C40019;
+  --head:'Exo 2',sans-serif;
+  --gut:clamp(20px,5vw,56px);
+  --pad:clamp(64px,9vw,128px);
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0F1514;--bg2:#141C1B;--card:#192322;--ink:#ECEFEE;--mute:#A9B7B4;--line:#2A3A38;--link:#5CC4B5;--btn:#2FA091;--btn-t:#06100F;--pain:#FF5468}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:68px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 'Golos Text',system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3,p,ul,ol,figure,blockquote{margin:0;padding:0}
+ul,ol{list-style:none}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--link)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:1180px;margin:0 auto}
+.sec{padding:var(--pad) var(--gut)}
+.read{max-width:65ch}
+.eyebrow{font:600 12px/1.4 'Golos Text',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wrap:balance}
+.lead{font-size:clamp(18px,2.2vw,21px);color:var(--mute);max-width:65ch}
+
+/* кнопки */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 30px;border-radius:999px;background:var(--btn);color:var(--btn-t);font:600 17px/1 'Golos Text',sans-serif;text-decoration:none;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 28px -10px rgba(23,117,106,.7)}
+.btn--gold{background:var(--gold);color:#1A1500}
+.btn--gold:hover{box-shadow:0 10px 28px -10px rgba(201,162,39,.7)}
+.btn--sm{min-height:44px;padding:0 20px;font-size:15px;background:#fff;color:#111}
+.btn--sm:hover{box-shadow:none;background:#eee}
+.btn--block{width:100%}
+
+/* ───── 0. Шапка ───── */
+.top{position:sticky;top:0;z-index:50;background:rgba(11,6,7,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.07)}
+.top__in{max-width:1180px;margin:0 auto;padding:10px var(--gut);display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none;font:600 12px/1 'Golos Text',sans-serif;letter-spacing:.22em;text-transform:uppercase}
+.brand svg{flex:none}
+
+/* ───── 1. БОЛЬ ───── */
+.pain{position:relative;background:var(--night);color:#fff;padding:clamp(40px,7vw,96px) var(--gut) clamp(72px,9vw,120px);overflow:hidden}
+.pain::before{content:"";position:absolute;inset:auto -20% -40% -20%;height:70%;background:radial-gradient(60% 60% at 50% 100%,rgba(214,0,28,.38),transparent 70%);pointer-events:none}
+.pain__in{position:relative;max-width:1180px;margin:0 auto;display:grid;gap:clamp(28px,5vw,64px);grid-template-columns:1fr}
+@media(min-width:960px){.pain__in{grid-template-columns:1.05fr .95fr;align-items:center}}
+.pain h1{font:600 clamp(30px,5.6vw,64px)/1.08 var(--head);letter-spacing:-.015em;text-wrap:balance}
+.pain h1 em{font-style:normal;color:var(--hh-bright)}
+.pain__cap{margin-top:20px;color:#C9B9BB;font-size:15px;letter-spacing:.04em}
+.chat{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.chat__label{font:600 12px/1.4 'Golos Text',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--hh-bright);margin-bottom:4px}
+.msg{max-width:min(100%,460px);padding:13px 18px;border-radius:4px 20px 20px 20px;background:var(--night2);border:1px solid #3A1A1F;border-left:3px solid var(--hh);font-size:clamp(16px,1.8vw,18px);line-height:1.45;color:#F4ECEC}
+.msg--last{background:var(--hh);border-color:var(--hh);color:#fff;font-weight:500;box-shadow:0 14px 40px -14px rgba(214,0,28,.8)}
+.js .msg{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.js .msg.on{opacity:1;transform:none}
+.pain__end{position:relative;max-width:1180px;margin:clamp(40px,6vw,72px) auto 0;padding-top:28px;border-top:1px solid #3A1A1F}
+.pain__end p{font:600 clamp(22px,3.4vw,38px)/1.2 var(--head);color:#fff;max-width:26ch}
+.pain__end p b{font-weight:600;color:var(--hh-bright)}
+.arrow{display:block;margin-top:28px;color:var(--hh-bright);animation:bob 2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(8px)}}
+
+/* ───── мост: боль → спокойствие ───── */
+.bridge{height:clamp(140px,22vw,260px);background:linear-gradient(180deg,var(--night) 0%,#2B0A10 18%,#10201E 58%,var(--bg) 100%)}
+
+/* ───── 2. ОФФЕР ───── */
+.offer{padding-top:0}
+.offer__in{display:grid;gap:clamp(36px,6vw,80px);grid-template-columns:1fr;align-items:center}
+@media(min-width:960px){.offer__in{grid-template-columns:1.1fr .9fr}}
+.offer .eyebrow{color:var(--link)}
+.offer h2.title{margin-top:16px;font:600 clamp(36px,8.4vw,92px)/1 var(--head);letter-spacing:.05em;text-transform:uppercase;color:var(--ink)}
+.offer .sub{margin-top:20px;font:500 clamp(20px,3vw,28px)/1.3 var(--head);color:var(--teal);max-width:24ch}
+@media(prefers-color-scheme:dark){.offer .sub{color:var(--gold2)}}
+.offer .txt{margin-top:20px;color:var(--mute);max-width:56ch}
+.facts{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px}
+.facts li{padding:9px 16px;border:1px solid var(--line);border-radius:999px;font-size:15px;background:var(--card)}
+.offer .btn{margin-top:32px}
+/* герой: экран эйчара */
+.screen{border-radius:22px;background:var(--card);border:1px solid var(--line);box-shadow:0 40px 80px -40px rgba(14,33,31,.35);padding:18px;display:flex;flex-direction:column;gap:10px}
+.screen__bar{display:flex;gap:6px;padding:0 4px 8px}
+.screen__bar i{width:9px;height:9px;border-radius:50%;background:var(--line)}
+.row{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:14px;border:1px solid var(--line);opacity:.55}
+.row .av{width:38px;height:38px;border-radius:50%;background:var(--bg2);flex:none}
+.row .ln{flex:1;display:flex;flex-direction:column;gap:7px}
+.row .ln i{display:block;height:8px;border-radius:4px;background:var(--bg2)}
+.row .ln i:first-child{width:55%;background:var(--line)}
+.row .ln i:last-child{width:80%}
+.row--on{opacity:1;position:relative;border:1.5px solid var(--gold);background:linear-gradient(135deg,rgba(201,162,39,.12),transparent 60%);box-shadow:0 0 0 6px rgba(201,162,39,.12)}
+.row--on .ln i:first-child{background:var(--teal)}
+.row--on .tag{font:600 11px/1 'Golos Text',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);border:1px solid var(--line);border-radius:999px;padding:6px 10px;white-space:nowrap}
+.screen__eye{margin:2px 4px 4px;font-size:13px;color:var(--mute)}
+
+/* ───── 3. ПОЧЕМУ ───── */
+.why{background:var(--bg2)}
+.why h2{max-width:20ch}
+.why__list{margin-top:clamp(36px,5vw,64px);display:grid;gap:20px;grid-template-columns:1fr}
+@media(min-width:900px){.why__list{grid-template-columns:repeat(3,1fr);gap:28px}}
+.why__list li{padding:24px 22px 26px;background:var(--card);border-radius:18px;border:1px solid var(--line);border-top:4px solid var(--hh)}
+.why__list .n{font:600 14px/1 var(--head);letter-spacing:.12em;color:var(--pain)}
+.why__list h3{margin-top:14px;font:600 20px/1.3 var(--head)}
+.why__list p{margin-top:10px;color:var(--mute);font-size:16px}
+.why__out{margin-top:clamp(32px,5vw,56px);font:500 clamp(20px,2.6vw,28px)/1.35 var(--head);max-width:36ch}
+.why__out span{color:var(--teal)}
+@media(prefers-color-scheme:dark){.why__out span{color:var(--gold2)}}
+
+/* ───── 4. МЕХАНИКА ───── */
+.mech h2{max-width:18ch}
+.flow{margin-top:clamp(32px,5vw,56px);display:flex;flex-direction:column;align-items:stretch;gap:0}
+.node{padding:22px 24px;border-radius:18px;border:1px solid var(--line);background:var(--card);text-align:center;font:600 18px/1.3 var(--head)}
+.node small{display:block;margin-top:6px;font:400 14px/1.4 'Golos Text',sans-serif;color:var(--mute)}
+.node--mid{border-color:var(--gold);box-shadow:0 0 0 6px rgba(201,162,39,.12)}
+.node--end{background:var(--teal);border-color:var(--teal);color:#fff}
+.node--end small{color:#D6EFEA}
+.link{align-self:center;width:2px;height:34px;background:linear-gradient(var(--line),var(--teal));position:relative}
+.link::after{content:"";position:absolute;bottom:-2px;left:-4px;border:5px solid transparent;border-top:8px solid var(--teal);border-bottom:0}
+@media(min-width:800px){
+  .flow{flex-direction:row;align-items:center}
+  .node{flex:1}
+  .link{width:56px;height:2px;flex:none;background:linear-gradient(90deg,var(--line),var(--teal))}
+  .link::after{bottom:auto;left:auto;right:-2px;top:-4px;border:5px solid transparent;border-left:8px solid var(--teal);border-right:0}
+}
+.steps{margin-top:clamp(40px,6vw,72px);display:grid;gap:0;counter-reset:s}
+.steps li{display:grid;grid-template-columns:52px 1fr;gap:6px 18px;padding:24px 0;border-top:1px solid var(--line);counter-increment:s}
+.steps li:last-child{border-bottom:1px solid var(--line)}
+.steps li::before{content:counter(s);grid-row:span 2;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--gold);display:grid;place-items:center;font:600 17px/1 var(--head)}
+.steps .d{font:600 13px/1.4 'Golos Text',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--link)}
+.steps p{color:var(--mute);max-width:62ch}
+.steps p b{color:var(--ink);font-weight:500}
+.note{margin-top:22px;font-size:15px;color:var(--mute);max-width:65ch;padding-left:14px;border-left:3px solid var(--gold)}
+
+/* ───── 5. РЕНТГЕН ───── */
+.xray{background:var(--bg2)}
+.xray h2{max-width:16ch}
+.xray__grid{margin-top:clamp(32px,5vw,56px);display:grid;gap:clamp(28px,4vw,56px);grid-template-columns:1fr}
+@media(min-width:960px){.xray__grid{grid-template-columns:1.15fr .85fr;align-items:start}}
+.list{border-radius:22px;background:var(--card);border:1px solid var(--line);padding:18px;display:flex;flex-direction:column;gap:10px;box-shadow:0 40px 80px -44px rgba(14,33,31,.4)}
+.list__tag{font:600 11px/1.3 'Golos Text',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);padding:2px 4px 6px}
+.list .row{opacity:.5;padding:12px 14px}
+.cv{border:1.5px solid var(--gold);border-radius:16px;padding:20px 18px;background:var(--bg);display:flex;flex-direction:column;gap:14px;box-shadow:0 0 0 6px rgba(201,162,39,.12)}
+.cv dt{font:600 11px/1.3 'Golos Text',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.cv dd{margin:3px 0 0;font-size:16px}
+.cv dd.pos{font:600 22px/1.2 var(--head)}
+.cv blockquote{font-style:italic;color:var(--ink);padding-left:12px;border-left:3px solid var(--hh)}
+.m{display:inline-grid;place-items:center;width:24px;height:24px;margin-left:8px;border-radius:50%;background:var(--hh);color:#fff;font:600 13px/1 'Golos Text',sans-serif;vertical-align:2px;flex:none}
+.legend{display:flex;flex-direction:column;gap:14px}
+.legend li{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start;padding:16px 18px;border-radius:14px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--hh);font-size:16px}
+.legend .m{margin:1px 0 0}
+.fix{margin-top:6px;padding:20px 20px 22px;border-radius:16px;background:var(--teal);color:#fff}
+.fix .eyebrow{color:#BFE8E1}
+.fix p{margin-top:8px;font-size:16px}
+.fix s{opacity:.8;text-decoration-color:var(--hh-bright);text-decoration-thickness:2px}
+.fix b{font-weight:500;color:#fff}
+.xray__cap{margin-top:28px;color:var(--mute);max-width:65ch}
+
+/* ───── 6. РЕЗУЛЬТАТ (спокойный тёмный) ───── */
+.gain{background:var(--teal-d);color:#E8EFED}
+.gain h2{color:#fff;max-width:18ch}
+.gain__list{margin-top:clamp(32px,5vw,56px);display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:760px){.gain__list{grid-template-columns:1fr 1fr}}
+.gain__list li{padding:24px 22px;border-radius:18px;background:var(--teal-d2);border:1px solid #2A4A45;font-size:17px;display:grid;grid-template-columns:30px 1fr;gap:14px}
+.gain__list svg{margin-top:3px}
+.gain__list b{color:#fff;font-weight:600}
+.gain__list span{color:#B7C7C3;display:block;margin-top:4px;font-size:15px}
+.gain__honest{margin-top:28px;color:#B7C7C3;max-width:65ch}
+.gain__honest b{color:var(--gold2);font-weight:500}
+
+/* ───── 7. ТАРИФЫ ───── */
+.tar h2{max-width:14ch}
+.tar__grid{margin-top:clamp(32px,5vw,56px);display:grid;gap:20px;grid-template-columns:1fr}
+@media(min-width:860px){.tar__grid{grid-template-columns:1fr 1fr;gap:28px}}
+.plan{position:relative;display:flex;flex-direction:column;padding:30px 26px 28px;border-radius:22px;background:var(--card);border:1px solid var(--line)}
+.plan--rec{border:1.5px solid var(--gold);box-shadow:0 0 0 6px rgba(201,162,39,.12),0 40px 80px -50px rgba(14,33,31,.5)}
+.plan__flag{position:absolute;top:-13px;left:26px;background:var(--gold);color:#1A1500;font:600 12px/1 'Golos Text',sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:7px 12px;border-radius:999px}
+.plan h3{font:600 24px/1.2 var(--head)}
+.plan .price{margin-top:12px;font:600 clamp(40px,6vw,52px)/1 var(--head);letter-spacing:-.01em}
+.plan .for{margin-top:12px;color:var(--mute);font-size:16px}
+.plan ul{margin:22px 0 26px;display:flex;flex-direction:column;gap:11px;flex:1}
+.plan li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:16px}
+.plan li svg{margin-top:4px;color:var(--teal)}
+.tar__note{margin-top:28px;color:var(--mute);max-width:65ch}
+.tar__note b{color:var(--ink);font-weight:500}
+.seats{display:none}
+
+/* ───── 8. АВТОР ───── */
+.who{background:var(--bg2)}
+.who__in{display:grid;gap:clamp(28px,5vw,72px);grid-template-columns:1fr;align-items:center}
+@media(min-width:860px){.who__in{grid-template-columns:.7fr 1.3fr}}
+.who img{border-radius:22px;width:100%;max-width:380px;aspect-ratio:2/3;object-fit:cover;object-position:top}
+.who h2{margin-top:12px}
+.who p{margin-top:22px;color:var(--mute);max-width:60ch}
+.who ul{margin-top:24px;display:flex;flex-direction:column;gap:12px}
+.who li{padding-left:18px;position:relative;max-width:60ch}
+.who li::before{content:"";position:absolute;left:0;top:.7em;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+
+/* ───── 9. ДЛЯ КОГО ───── */
+.fit__grid{margin-top:clamp(28px,4vw,48px);display:grid;gap:20px;grid-template-columns:1fr}
+@media(min-width:760px){.fit__grid{grid-template-columns:1fr 1fr}}
+.fit__col{padding:28px 26px;border-radius:20px;border:1px solid var(--line);background:var(--card)}
+.fit__col h3{font:600 20px/1.3 var(--head)}
+.fit__col ul{margin-top:18px;display:flex;flex-direction:column;gap:14px}
+.fit__col li{display:grid;grid-template-columns:24px 1fr;gap:12px}
+.fit__col svg{margin-top:4px}
+.fit__yes svg{color:var(--teal)}
+.fit__no{border-top:4px solid var(--hh)}
+.fit__no svg{color:var(--pain)}
+.fit__yes{border-top:4px solid var(--teal)}
+
+/* ───── 10. ВОПРОСЫ ───── */
+.faq{background:var(--bg2)}
+.faq__list{margin-top:clamp(28px,4vw,48px);max-width:820px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:64px;padding:16px 0;font:600 18px/1.35 var(--head)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;width:32px;height:32px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font:400 20px/1 'Golos Text',sans-serif;transition:transform .25s,background .25s}
+.faq details[open] summary::after{transform:rotate(45deg);background:var(--gold);border-color:var(--gold);color:#1A1500}
+.faq details p{padding:0 50px 22px 0;color:var(--mute);max-width:65ch}
+
+/* ───── 11. ФИНАЛ ───── */
+.fin{background:linear-gradient(180deg,var(--teal-d) 0%,#0A1614 100%);color:#E8EFED;text-align:center}
+.fin h2{color:#fff;max-width:20ch;margin:0 auto}
+.fin p{margin:22px auto 0;color:#B7C7C3;max-width:48ch}
+.fin .btn{margin-top:32px}
+.fin small{display:block;margin-top:14px;color:#8FA39F;font-size:14px}
+
+/* ───── 12. ПОДВАЛ ───── */
+.foot{background:#0A1614;color:#8FA39F;padding:48px var(--gut) 120px;font-size:14px;line-height:1.6}
+.foot__in{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+.foot a{color:#C8D3D0}
+.foot nav{display:flex;flex-wrap:wrap;gap:8px 24px}
+
+/* липкая кнопка (телефон) */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(15,21,20,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.1);transform:translateY(110%);transition:transform .3s}
+.sticky.on{transform:none}
+.sticky .btn{width:100%;background:var(--gold);color:#1A1500}
+@media(min-width:861px){.sticky{display:none}}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .msg{opacity:1;transform:none;transition:none}
+  .arrow{animation:none}
+  .sticky,.btn,.faq summary::after{transition:none}
+}
+</style>
+</head>
+<body>
+
+<!-- 0. Шапка -->
+<header class="top">
+  <div class="top__in">
+    <a class="brand" href="./" aria-label="Академия карьеры">
+      <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="11" fill="#fff"/><circle cx="15" cy="15" r="13.4" fill="none" stroke="#C9A227" stroke-width="1.2"/></svg>
+      Академия карьеры
+    </a>
+    <a class="btn btn--sm" href="#tariffs" data-goal="header_cta">Записаться</a>
+  </div>
+</header>
+
+<main>
+
+<!-- 1. БОЛЬ -->
+<section class="pain" id="pain" aria-labelledby="h1">
+  <div class="pain__in">
+    <div>
+      <h1 id="h1">Вы отправили десятки откликов. В&nbsp;ответ <em>тишина или отказ через несколько секунд</em></h1>
+    </div>
+    <div class="chat" id="chat">
+      <div class="chat__label">Так они звучат у соискателей</div>
+      <p class="msg">Отправил 50 откликов. Тишина.</p>
+      <p class="msg">Отказ пришёл через пять секунд. Меня вообще читали?</p>
+      <p class="msg">Статус «Просмотрен», а ответа нет.</p>
+      <p class="msg">Может, дело в резюме? Или в письме? Или меня отсеял фильтр?</p>
+      <p class="msg">Не понятно, это я не подхожу рынку или система сбоит.</p>
+      <p class="msg msg--last">Правила закрыты, как в лотерее. Что вообще происходит с моим откликом?</p>
+    </div>
+  </div>
+  <div class="pain__end">
+    <p>Хуже всего не отказ, а то, что вы не знаете, <b>почему</b></p>
+    <svg class="arrow" width="28" height="40" viewBox="0 0 28 40" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v32M4 26l10 10 10-10"/></svg>
+  </div>
+</section>
+
+<div class="bridge" aria-hidden="true"></div>
+
+<!-- 2. НАЗВАНИЕ И ОФФЕР -->
+<section class="sec offer" id="offer" aria-labelledby="h-offer">
+  <div class="wrap offer__in">
+    <div>
+      <p class="eyebrow">Мастер-класс · 31 октября · онлайн</p>
+      <h2 class="title" id="h-offer">Экран эйчара</h2>
+      <p class="sub">Покажу, что эйчар видит вместо вашего отклика</p>
+      <p class="txt">Правила закрыты, как в лотерее. Вы отправляете отклик и не знаете, что с ним происходит. На мастер-классе вы откликнетесь на вакансию под вашу должность, а я покажу, как этот отклик выглядит на экране работодателя, почему на него молчат и что поменять.</p>
+      <ul class="facts">
+        <li>31 октября, живая встреча</li>
+        <li>Заявки до 28 октября</li>
+        <li>Разбор вашего отклика от 5&nbsp;900&nbsp;₽</li>
+      </ul>
+      <a class="btn" href="#tariffs" data-goal="cta_offer">Выбрать формат</a>
+    </div>
+    <div class="screen" role="img" aria-label="Схема: список откликов на экране работодателя, один отклик открыт">
+      <div class="screen__bar"><i></i><i></i><i></i></div>
+      <div class="row"><span class="av"></span><span class="ln"><i></i><i></i></span></div>
+      <div class="row row--on"><span class="av" style="background:var(--gold)"></span><span class="ln"><i></i><i></i></span><span class="tag">Ваш отклик</span></div>
+      <div class="row"><span class="av"></span><span class="ln"><i></i><i></i></span></div>
+      <p class="screen__eye">Так список видит эйчар: строка, а не вся ваша история</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. ПОЧЕМУ ТАК ПРОИСХОДИТ -->
+<section class="sec why" id="why" aria-labelledby="h-why">
+  <div class="wrap">
+    <h2 id="h-why">Вы не видите того, что видит эйчар</h2>
+    <ol class="why__list">
+      <li><span class="n">01</span><h3>Эйчар видит строку в списке</h3><p>Часто не резюме целиком, а имя, должность, места работы, навыки и начало сопроводительного. Открывать полное резюме не обязательно.</p></li>
+      <li><span class="n">02</span><h3>Откликов сотни</h3><p>На популярную вакансию приходят сотни откликов. Ответить каждому физически не получается, и отказ без причины становится нормой.</p></li>
+      <li><span class="n">03</span><h3>Отклик может остаться непросмотренным</h3><p>Отклик, не подходящий под требования, может сам остаться непросмотренным. И вы никогда не узнаете об этом изнутри.</p></li>
+    </ol>
+    <p class="why__out">Поэтому совет «доработайте резюме» не работает: никто не показывает, <span>что именно в вашем отклике не так.</span></p>
+  </div>
+</section>
+
+<!-- 4. С ТОЙ СТОРОНЫ ЭКРАНА -->
+<section class="sec mech" id="mech" aria-labelledby="h-mech">
+  <div class="wrap">
+    <h2 id="h-mech">С той стороны экрана</h2>
+    <div class="flow" aria-label="Схема: ваш отклик, экран эйчара, разбор и правки">
+      <div class="node">Ваш отклик<small>на учебную вакансию</small></div>
+      <span class="link" aria-hidden="true"></span>
+      <div class="node node--mid">Экран эйчара<small>как его видит работодатель</small></div>
+      <span class="link" aria-hidden="true"></span>
+      <div class="node node--end">Разбор и правки<small>что поменять</small></div>
+    </div>
+    <ol class="steps">
+      <li><span class="d">До 28 октября</span><p><b>Вы записываетесь и заполняете анкету:</b> должность, отрасль, резюме, зарплатные ожидания.</p></li>
+      <li><span class="d">После записи</span><p><b>Я публикую учебную вакансию</b> под вашу должность (в базовом тарифе — под ваше направление, в персональном — под точную). Найм по ней не ведётся.</p></li>
+      <li><span class="d">Ваш шаг</span><p><b>Вы откликаетесь</b> со своим сопроводительным, как на обычную вакансию.</p></li>
+      <li><span class="d">29–30 октября</span><p><b>Я показываю скрины</b> вашего отклика в интерфейсе работодателя и пишу разбор: что видно сразу, три стоп-фактора, три правки.</p></li>
+      <li><span class="d">31 октября</span><p><b>Живая встреча.</b> Типичные ошибки на обезличенных примерах и ответы на ваши вопросы.</p></li>
+    </ol>
+    <p class="note">Вакансия учебная: найм по ней не ведётся, вы откликаетесь осознанно, чтобы увидеть свой отклик глазами работодателя.</p>
+  </div>
+</section>
+
+<!-- 5. ОТКЛИК ПОД РЕНТГЕНОМ -->
+<section class="sec xray" id="xray" aria-labelledby="h-xray">
+  <div class="wrap">
+    <h2 id="h-xray">Отклик под рентгеном</h2>
+    <div class="xray__grid">
+      <div class="list" aria-label="Стилизованный список откликов, один открыт и помечен тремя отметками">
+        <div class="list__tag">Учебный пример, вымышленный кандидат</div>
+        <div class="row"><span class="av"></span><span class="ln"><i></i><i></i></span></div>
+        <dl class="cv" style="margin:0">
+          <div><dt>Должность</dt><dd class="pos">Руководитель отдела продаж</dd></div>
+          <div><dt>Места работы</dt><dd>Дистрибьюция · Производство · Розница</dd></div>
+          <div><dt>Навыки</dt><dd>управление продажами, переговоры, CRM, отчётность<span class="m" aria-label="пометка 3">3</span></dd></div>
+          <div><dt>Начало сопроводительного</dt><dd><blockquote>«Здравствуйте! Меня заинтересовала ваша вакансия, мой опыт полностью ей соответствует…»<span class="m" aria-label="пометки 1 и 2">1</span><span class="m" aria-hidden="true">2</span></blockquote></dd></div>
+        </dl>
+        <div class="row"><span class="av"></span><span class="ln"><i></i><i></i></span></div>
+      </div>
+      <div>
+        <ol class="legend">
+          <li><span class="m">1</span>Первая строка подходит к любой вакансии, зацепки нет</li>
+          <li><span class="m">2</span>Нет результата: непонятно, что вы уже достигли</li>
+          <li><span class="m">3</span>Навыки собраны списком и не связаны с задачей вакансии</li>
+        </ol>
+        <div class="fix" style="margin-top:20px">
+          <span class="eyebrow">Правка</span>
+          <p><s>Было: «Мой опыт полностью соответствует…»</s></p>
+          <p><b>Стало:</b> «В прошлой компании я перестроил воронку продаж, и план перестал зависеть от двух крупных клиентов. Ваша задача похожа…»</p>
+        </div>
+      </div>
+    </div>
+    <p class="xray__cap">Такой разбор я делаю для каждого участника на его реальном отклике.</p>
+  </div>
+</section>
+
+<!-- 6. ОТКЛИК БЕЗ ТИШИНЫ -->
+<section class="sec gain" id="gain" aria-labelledby="h-gain">
+  <div class="wrap">
+    <h2 id="h-gain">Отклик без тишины</h2>
+    <ul class="gain__list">
+      <li><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#E7C766" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="13" r="11"/><path d="M7.5 13.5l4 4 7-8"/></svg><p><b>Увидите свой отклик так, как его видит эйчар</b><span>Скрины из интерфейса работодателя.</span></p></li>
+      <li><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#E7C766" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="13" r="11"/><path d="M7.5 13.5l4 4 7-8"/></svg><p><b>Поймёте, где он теряется</b><span>В резюме, в письме или в соответствии вакансии.</span></p></li>
+      <li><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#E7C766" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="13" r="11"/><path d="M7.5 13.5l4 4 7-8"/></svg><p><b>Получите три правки</b><span>И переписанное начало сопроводительного.</span></p></li>
+      <li><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#E7C766" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="13" r="11"/><path d="M7.5 13.5l4 4 7-8"/></svg><p><b>Узнаете, как устроен отбор</b><span>На живой встрече, и сможете задать вопрос.</span></p></li>
+    </ul>
+    <p class="gain__honest">Приглашения не обещаю: решение принимает работодатель. Зато пропадёт главное — <b>непонимание, что с вашим откликом не так.</b></p>
+  </div>
+</section>
+
+<!-- 7. ТАРИФЫ -->
+<section class="sec tar" id="tariffs" aria-labelledby="h-tar">
+  <div class="wrap">
+    <p class="eyebrow">Заявки до 28 октября</p>
+    <h2 id="h-tar" style="margin-top:12px">Выберите формат</h2>
+    <div class="tar__grid">
+      <article class="plan">
+        <h3>Базовый</h3>
+        <p class="price">5&nbsp;900&nbsp;₽</p>
+        <p class="for">Для тех, кто хочет понять, что не так, и начать с быстрых правок.</p>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Отклик на учебную вакансию вашего направления</li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Скрины из интерфейса работодателя</li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Письменный разбор</li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Живая встреча 31 октября и запись</li>
+        </ul>
+        <a class="btn btn--block" href="#" data-pay="base" data-goal="tariff_base">Записаться за 5&nbsp;900&nbsp;₽</a>
+        <p class="seats" data-seats="base"></p>
+      </article>
+      <article class="plan plan--rec">
+        <span class="plan__flag">Рекомендуем</span>
+        <h3>Персональный</h3>
+        <p class="price">11&nbsp;900&nbsp;₽</p>
+        <p class="for">Для узкой специализации, руководителей и тех, кому нужна проверка после правок.</p>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Всё из базового</li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Учебная вакансия под вашу точную должность и отрасль</li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Голосовой разбор от меня на 5–7 минут</li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Повторный отклик после правок в течение 48 часов</li>
+        </ul>
+        <a class="btn btn--block btn--gold" href="#" data-pay="pro" data-goal="tariff_pro">Записаться за 11&nbsp;900&nbsp;₽</a>
+        <p class="seats" data-seats="pro"></p>
+      </article>
+    </div>
+    <p class="tar__note"><b>Заявки до 28 октября.</b> Мест мало, потому что каждый отклик я разбираю лично.</p>
+  </div>
+</section>
+
+<!-- 8. ГЛАЗАМИ ЭЙЧАРА -->
+<section class="sec who" id="author" aria-labelledby="h-who">
+  <div class="wrap who__in">
+    <img src="img/author-main.webp" width="560" height="840" alt="Анастасия Мягченкова" loading="lazy" decoding="async">
+    <div>
+      <p class="eyebrow">Автор</p>
+      <h2 id="h-who">Глазами эйчара</h2>
+      <p>Я Анастасия Мягченкова. Этот экран я знаю изнутри.</p>
+      <ul>
+        <li>Раньше руководила HR в международной корпорации Corning</li>
+        <li>Была HRD в федеральной компании GPW</li>
+        <li>Сейчас консультирую специалистов и топ-менеджеров крупных компаний</li>
+        <li>Пишу колонки для Forbes и РБК</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 9. ДЛЯ КОГО -->
+<section class="sec fit" id="fit" aria-labelledby="h-fit">
+  <div class="wrap">
+    <h2 id="h-fit">Для кого этот мастер-класс</h2>
+    <div class="fit__grid">
+      <div class="fit__col fit__yes">
+        <h3>Подойдёт, если</h3>
+        <ul>
+          <li><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5l5 5 9-10"/></svg>вы сейчас откликаетесь на вакансии;</li>
+          <li><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5l5 5 9-10"/></svg>хотите понять, почему молчат;</li>
+          <li><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5l5 5 9-10"/></svg>готовы услышать честный разбор.</li>
+        </ul>
+      </div>
+      <div class="fit__col fit__no">
+        <h3>Не подойдёт, если</h3>
+        <ul>
+          <li><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l12 12M17 5L5 17"/></svg>ждёте гарантии приглашений или оффера;</li>
+          <li><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l12 12M17 5L5 17"/></svg>хотите, чтобы опыт «красиво прикрасили»;</li>
+          <li><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l12 12M17 5L5 17"/></svg>пока не ищете работу.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. ВОПРОСЫ -->
+<section class="sec faq" id="faq" aria-labelledby="h-faq">
+  <div class="wrap">
+    <h2 id="h-faq">Вопросы</h2>
+    <div class="faq__list">
+      <details><summary>Вы обещаете приглашения после разбора?</summary><p>Нет. Я показываю, как выглядит ваш отклик и что в нём поменять. Решение принимает работодатель.</p></details>
+      <details><summary>Значит, вакансия ненастоящая?</summary><p>Она учебная, и я об этом говорю прямо: найм по ней не ведётся. Вы откликаетесь осознанно.</p></details>
+      <details><summary>Мне будут «красиво приписывать» опыт?</summary><p>Нет. Правки только по фактам: формулировки, порядок, акценты. Чего не было в вашем опыте, в отклике не появится.</p></details>
+      <details><summary>Что с моими данными?</summary><p>Резюме и отклик видите только вы и я. Примеры на встрече обезличиваю и показываю только с вашего согласия.</p></details>
+      <details><summary>Не смогу быть на встрече 31 октября.</summary><p>Запись придёт вам после встречи, а личный разбор вы получите в любом случае.</p></details>
+      <details><summary>Чем отличаются тарифы?</summary><p>В базовом вы откликаетесь на вакансию вашего направления. В персональном я публикую вакансию под вашу точную должность, записываю голосовой разбор и проверяю отклик ещё раз после правок.</p></details>
+      <details><summary>У меня нестандартная должность, подойдёт ли?</summary><p>Тогда берите персональный тариф: вакансия будет под вашу точную роль.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 11. ФИНАЛ -->
+<section class="sec fin" id="final" aria-labelledby="h-fin">
+  <div class="wrap">
+    <h2 id="h-fin">Отклик без тишины начинается с того, что вы увидите его со стороны</h2>
+    <p>Заявки до 28 октября. Мест мало, потому что каждый отклик я разбираю лично.</p>
+    <a class="btn btn--gold" href="#tariffs" data-goal="cta_final">Выбрать формат</a>
+  </div>
+</section>
+
+</main>
+
+<!-- 12. ПОДВАЛ -->
+<footer class="foot">
+  <div class="foot__in">
+    <div>ИП Мягченкова Анастасия Владимировна · г. Самара · ИНН 631229128657 · ОГРНИП 324632700114710</div>
+    <nav aria-label="Документы">
+      <a href="oferta.html">Договор-оферта</a>
+      <a href="privacy.html">Политика обработки персональных данных</a>
+      <a href="soglasie.html">Согласие на обработку персональных данных</a>
+    </nav>
+    <div>Вопросы: <a href="https://t.me/hrexpert63" rel="noopener">Telegram @hrexpert63</a> · <a href="mailto:hrexpert63@gmail.com">hrexpert63@gmail.com</a></div>
+    <div>Мастер-класс не является продуктом или партнёрской программой hh.ru. Вакансия на мастер-классе учебная, найм по ней не ведётся.</div>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky"><a class="btn" href="#tariffs" data-goal="cta_sticky">Выбрать формат</a></div>
+
+<script>
+(function(){
+  /* ───── настройки: заполнить перед запуском ───── */
+  var CONFIG = {
+    // ссылки на оплату в GetCourse (пока пусто — кнопки ведут в личку автору)
+    pay: { base: '', pro: '' },
+    fallback: 'https://t.me/hrexpert63',
+    // реальный остаток мест, обновляется вручную; null — не показывать
+    seats: { base: null, pro: null },
+    // номер счётчика Яндекс Метрики; 0 — не подключать
+    metrika: 0
+  };
+
+  var qs = location.search;
+  function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
+
+  /* ссылки на оплату + проброс UTM */
+  $$('[data-pay]').forEach(function(a){
+    var url = CONFIG.pay[a.dataset.pay];
+    if(url){ a.href = url + (qs ? (url.indexOf('?')>-1 ? '&' : '?') + qs.slice(1) : ''); }
+    else { a.href = CONFIG.fallback; a.target = '_blank'; a.rel = 'noopener'; }
+  });
+
+  /* остаток мест: только реальное число */
+  $$('[data-seats]').forEach(function(el){
+    var n = CONFIG.seats[el.dataset.seats];
+    if(n === null || n === undefined) return;
+    el.style.display = 'block';
+    el.style.cssText += ';margin-top:12px;text-align:center;font-size:14px;color:var(--mute)';
+    if(n > 0){
+      el.textContent = 'Осталось мест: ' + n;
+    } else {
+      el.textContent = 'Места закончились';
+      var b = el.parentNode.querySelector('.btn');
+      b.textContent = 'В лист ожидания'; b.href = CONFIG.fallback; b.target = '_blank';
+    }
+  });
+
+  /* ───── метрика ───── */
+  function goal(name){ try{ if(window.ym && CONFIG.metrika) ym(CONFIG.metrika,'reachGoal',name) }catch(e){} }
+  if(CONFIG.metrika){
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');
+    ym(CONFIG.metrika,'init',{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:false});
+  }
+  $$('[data-goal]').forEach(function(a){ a.addEventListener('click',function(){ goal(a.dataset.goal) }) });
+
+  var seen = {};
+  if('IntersectionObserver' in window){
+    var reach = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting && !seen[e.target.id]){ seen[e.target.id]=1; goal('reach_'+e.target.id); }
+      });
+    },{threshold:.25});
+    ['offer','tariffs','final'].forEach(function(id){ reach.observe(document.getElementById(id)) });
+  }
+  var depth = {};
+  addEventListener('scroll',function(){
+    var h = document.documentElement, p = Math.round((scrollY+innerHeight)/h.scrollHeight*100);
+    [25,50,75,100].forEach(function(t){ if(p>=t-1 && !depth[t]){ depth[t]=1; goal('scroll_'+t) } });
+  },{passive:true});
+
+  /* ───── блок 1: реплики по одной ───── */
+  var msgs = $$('#chat .msg');
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce){ msgs.forEach(function(m){ m.classList.add('on') }); }
+  else {
+    msgs.forEach(function(m,i){ setTimeout(function(){ m.classList.add('on') }, 350 + i*750); });
+    // страховка: если таймеры не сработали, всё видно
+    setTimeout(function(){ msgs.forEach(function(m){ m.classList.add('on') }) }, 6000);
+  }
+
+  /* ───── липкая кнопка на телефоне ───── */
+  var sticky = document.getElementById('sticky');
+  var why = document.getElementById('why'), tar = document.getElementById('tariffs'), fin = document.getElementById('final');
+  function inView(el){ var r = el.getBoundingClientRect(); return r.top < innerHeight && r.bottom > 0 }
+  function upd(){
+    var past = why.getBoundingClientRect().bottom < innerHeight*0.5;
+    sticky.classList.toggle('on', past && !inView(tar) && !inView(fin));
+  }
+  addEventListener('scroll',upd,{passive:true}); addEventListener('resize',upd); upd();
+})();
+</script>
+</body>
+</html>
