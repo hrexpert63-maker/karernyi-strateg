@@ -28,5 +28,17 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "otklik.hrexpert63.ru"
+        }
+      ],
+      "destination": "/ekran-ehr.html"
+    }
   ]
 }
