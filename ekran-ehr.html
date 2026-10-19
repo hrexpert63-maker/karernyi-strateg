@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Достучаться до HH — мастер-класс Анастасии Мягченковой</title>
+<title>Достучаться до hh — мастер-класс Анастасии Мягченковой</title>
 <meta name="description" content="Правила закрыты, как в лотерее: вы отправляете отклик и не знаете, что с ним происходит. На МК вы откликнетесь на вакансию под вашу должность, а я покажу, как этот отклик выглядит на экране работодателя, почему на него молчат и что поменять.">
 <link rel="canonical" href="https://karernyi-strateg.hrexpert63.ru/ekran-ehr.html">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -13,7 +13,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="Академия карьеры">
-<meta property="og:title" content="Достучаться до HH">
+<meta property="og:title" content="Достучаться до hh">
 <meta property="og:description" content="Правила закрыты, как в лотерее: вы отправляете отклик и не знаете, что с ним происходит. На МК вы откликнетесь на вакансию под вашу должность, а я покажу, как этот отклик выглядит на экране работодателя, почему на него молчат и что поменять.">
 <meta property="og:url" content="https://karernyi-strateg.hrexpert63.ru/ekran-ehr.html">
 <meta property="og:image" content="https://karernyi-strateg.hrexpert63.ru/img/og-ekran-ehr.jpg">
@@ -84,7 +84,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 /* hero: заголовок, затем монитор и реплики */
 .pain__in{position:relative;max-width:1180px;margin:0 auto;display:grid;gap:clamp(24px,4vw,40px);grid-template-columns:1fr}
 @media(min-width:960px){.pain__in{grid-template-columns:1fr 1fr;column-gap:56px;row-gap:28px;grid-template-areas:'h r' 'c r';align-items:start}
-  .pain__in h1{grid-area:h}.pain__in .rig{grid-area:r;align-self:center}.pain__in .chat{grid-area:c}}
+  .pain__in h1{grid-area:h}.pain__in .lap{grid-area:r;align-self:center}.pain__in .chat{grid-area:c}}
 .pain h1{max-width:20ch;font:600 clamp(30px,5.6vw,64px)/1.08 var(--head);letter-spacing:-.015em;text-wrap:balance}
 .pain h1 em{font-style:normal;color:var(--hh-bright)}
 .chat{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
@@ -99,40 +99,54 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 @keyframes bob{50%{transform:translateY(8px)}}
 
 
-/* монитор: отклик → автоотказ */
-.rig{width:100%;max-width:560px;margin:0 auto}
-.mon{border-radius:14px 14px 10px 10px;background:#15090B;border:2px solid #2C1A1D;padding:7px 7px 10px;box-shadow:0 30px 60px -30px rgba(214,0,28,.55)}
-.mon__bar{display:flex;align-items:center;gap:5px;padding:2px 4px 7px}
-.mon__bar i{width:8px;height:8px;border-radius:50%;background:#3A2326}
-.mon__bar .url{margin-left:8px;flex:1;min-width:0;padding:3px 10px;border-radius:999px;background:#241316;color:#9C8789;font:400 11px/1.4 'Golos Text',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.mon__page{position:relative;background:#fff;border-radius:8px;min-height:clamp(210px,52vw,300px);padding:14px 16px 16px;color:#16181D;overflow:hidden;font-family:'Golos Text',sans-serif}
-.nav{display:flex;align-items:center;gap:8px;padding-bottom:12px;border-bottom:1px solid #E7E9EE;margin-bottom:12px}
-.nav__dot{width:20px;height:20px;border-radius:50%;background:#E4E7EC}
-.nav__ln{height:8px;width:90px;border-radius:4px;background:#E4E7EC}.nav__ln--s{width:54px}
-.vac__t{font:700 clamp(16px,3.4vw,22px)/1.2 var(--head);color:#16181D}
-.vac__s{margin-top:6px;font-size:clamp(12px,2.4vw,14px);font-weight:500}
-.vac__m{margin-top:3px;font-size:clamp(11px,2.2vw,13px);color:#5B6270}
-.vac__btns{display:flex;gap:8px;margin-top:14px}
-.vac__btns span{display:grid;place-items:center;height:38px;border-radius:8px;font:600 clamp(12px,2.4vw,14px)/1 'Golos Text',sans-serif}
-.b1{flex:1.4;background:#0A6BFF;color:#fff}
-.b2{flex:1;background:#E8F0FF;color:#0A6BFF}
-.toast{position:absolute;right:12px;bottom:12px;left:12px;padding:12px 14px;border-radius:10px;opacity:0;font-size:clamp(12px,2.4vw,14px)}
+/* ноутбук: отклик → автоотказ */
+.lap{width:100%;max-width:640px;margin:0 auto;container-type:inline-size}
+.lap__lid{position:relative;padding:3cqw 3cqw 3.4cqw;background:#0B0B0D;border:2px solid #2B2B30;border-radius:2.4cqw 2.4cqw .6cqw .6cqw;box-shadow:0 40px 80px -36px rgba(214,0,28,.6)}
+.lap__lid::before{content:"";position:absolute;top:1.1cqw;left:50%;width:.9cqw;height:.9cqw;margin-left:-.45cqw;border-radius:50%;background:#26262B}
+.lap__base{height:2.4cqw;margin:0 -3%;background:linear-gradient(#D5D7DC,#8B8E96);border-radius:0 0 2.6cqw 2.6cqw;position:relative}
+.lap__base::after{content:"";position:absolute;top:0;left:50%;width:14%;height:.8cqw;margin-left:-7%;background:#A7AAB2;border-radius:0 0 1cqw 1cqw}
+.hh{position:relative;aspect-ratio:16/10.4;overflow:hidden;border-radius:.5cqw;background:#fff;color:#16181D;font:400 max(8px,2cqw)/1.35 'Golos Text',sans-serif}
+.hh__top{display:flex;align-items:center;gap:.8em;padding:.7em 1em;border-bottom:1px solid #E7E9EE}
+.hh__logo{width:2.7em;height:2.7em;border-radius:50%}
+.hh__tg{white-space:nowrap;display:flex;padding:.2em;border-radius:.9em;background:#EEF0F4;font-size:.92em}
+.hh__tg b{padding:.5em 1.2em;border-radius:.7em;background:#fff;font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.hh__tg span{padding:.5em 1em;color:#8A90A0}
+.hh__nav{font-size:.95em;font-weight:500}
+.hh__sp{flex:1}
+.hh__login{padding:.55em 1em;border-radius:.8em;background:#EEF0F4;font-weight:600;font-size:.92em}
+.hh__cr{padding:.55em 1em;border-radius:.8em;background:#000;color:#fff;font-weight:600;font-size:.92em;white-space:nowrap}
+.hh__body{display:grid;grid-template-columns:1.7fr 1fr;gap:.9em;padding:1em}
+.hh__card,.hh__side{border:1px solid #E7E9EE;border-radius:1.2em;padding:1.1em 1.2em}
+.hh__t{font:700 1.85em/1.15 var(--head);letter-spacing:-.01em}
+.hh__s{margin-top:.6em;font-size:1.12em;font-weight:500}
+.hh__m{margin-top:.3em;font-size:.95em}
+.hh__m--l{color:#8A90A0}
+.hh__btns{display:flex;gap:.6em;margin-top:1em}
+.hh__btns>span{display:grid;place-items:center;height:2.9em;border-radius:.8em;font-weight:600;font-size:.98em;position:relative}
+.b1{flex:1.7;background:#0A6BFF;color:#fff}
+.b2{flex:1.3;background:#E8F0FF;color:#0A6BFF}
+.b3{flex:.4;background:#E8F0FF;color:#0A6BFF}
+.hh__co{font:700 1.15em/1.25 var(--head)}
+.hh__it{display:flex;gap:.7em;margin-top:.9em;align-items:flex-start}
+.hh__it i{flex:none;width:2.3em;height:2.3em;border-radius:50%;background:#EEF0F4}
+.hh__it b{display:block;font-size:.95em}
+.hh__it small{display:block;color:#8A90A0;font-size:.85em;line-height:1.3}
+.toast{position:absolute;right:1em;bottom:1em;left:1em;padding:.9em 1.1em;border-radius:.9em;opacity:0;font-size:1em}
 .t1{background:#16181D;color:#fff;font-weight:500}
-.t2{background:var(--hh);color:#fff;display:flex;justify-content:space-between;align-items:baseline;gap:10px;box-shadow:0 10px 30px -8px rgba(214,0,28,.7)}
-.t2 b{font:700 clamp(15px,3vw,18px)/1.2 var(--head)}
-.t2 span{font-size:12px;opacity:.9}
-.cur{position:absolute;left:68%;top:78%;filter:drop-shadow(0 2px 3px rgba(0,0,0,.35));pointer-events:none;opacity:0}
-.stand{width:22%;height:22px;margin:0 auto;background:linear-gradient(#2C1A1D,#1D1012)}
-.foot-b{width:44%;height:8px;margin:0 auto;border-radius:6px 6px 0 0;background:#2C1A1D}
-/* без анимации (reduce или без JS) — финальный кадр сразу виден */
-.t2{opacity:1}.cur{opacity:1;left:30%;top:66%}
+.t2{background:var(--hh);color:#fff;display:flex;justify-content:space-between;align-items:baseline;gap:.8em;box-shadow:0 10px 30px -8px rgba(214,0,28,.7)}
+.t2 b{font:700 1.35em/1.2 var(--head)}
+.t2 span{font-size:.9em;opacity:.92}
+.cur{position:absolute;left:62%;top:58%;width:2.4em;height:2.4em;filter:drop-shadow(0 2px 3px rgba(0,0,0,.35));pointer-events:none;z-index:2}
+@container (max-width:470px){.hh__nav,.hh__login,.hh__side{display:none}.hh__body{grid-template-columns:1fr}.hh__top{gap:.6em}}
+/* без анимации (reduce) — финальный кадр сразу виден */
+.t2{opacity:1}
 @media(prefers-reduced-motion:no-preference){
   .t2{opacity:0;animation:t2 9s infinite}
   .t1{animation:t1 9s infinite}
-  .cur{animation:cur 9s infinite;left:80%;top:95%}
+  .cur{animation:cur 9s infinite}
   .b1{animation:b1 9s infinite}
 }
-@keyframes cur{0%{opacity:0;left:84%;top:98%}8%{opacity:1}30%{left:28%;top:68%}36%{left:28%;top:68%;transform:scale(.88)}40%{transform:scale(1)}88%{opacity:1;left:28%;top:68%}96%,100%{opacity:0;left:28%;top:68%}}
+@keyframes cur{0%{opacity:0;transform:translate(9em,5em)}8%{opacity:1}30%,34%{transform:translate(0,0)}36%{transform:translate(0,0) scale(.86)}40%{transform:translate(0,0)}88%{opacity:1;transform:translate(0,0)}96%,100%{opacity:0;transform:translate(0,0)}}
 @keyframes b1{0%,34%{background:#0A6BFF}36%,100%{background:#0852C4}}
 @keyframes t1{0%,36%{opacity:0;transform:translateY(8px)}40%,52%{opacity:1;transform:none}56%,100%{opacity:0}}
 @keyframes t2{0%,56%{opacity:0;transform:translateY(8px)}62%,92%{opacity:1;transform:none}98%,100%{opacity:0}}
@@ -149,6 +163,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 @media(min-width:960px){.offer__in{grid-template-columns:1.1fr .9fr}}
 .offer .eyebrow{color:var(--link)}
 .offer h2.title{margin-top:16px;font:600 clamp(30px,7.4vw,84px)/1.02 var(--head);letter-spacing:.03em;text-transform:uppercase;color:var(--ink)}
+.nw{white-space:nowrap}.ttl-hh{display:inline-block;height:.92em;width:.92em;vertical-align:-.08em;border-radius:50%}
 .offer .sub{margin-top:20px;font:500 clamp(20px,3vw,28px)/1.3 var(--head);color:var(--teal);max-width:24ch}
 @media(prefers-color-scheme:dark){.offer .sub{color:var(--gold2)}}
 .offer .txt{margin-top:20px;color:var(--mute);max-width:56ch}
@@ -185,6 +200,9 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 
 /* ───── 4. МЕХАНИКА ───── */
 .mech h2{max-width:18ch}
+.ph{margin:clamp(28px,4vw,48px) 0 0;border-radius:22px;overflow:hidden;background:linear-gradient(135deg,#E6E2D6,#CFD8D4);position:relative;aspect-ratio:16/9}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph figcaption{position:absolute;left:0;right:0;bottom:0;padding:48px 22px 18px;background:linear-gradient(transparent,rgba(8,14,13,.78));color:#fff;font-size:15px;line-height:1.4}
 .flow{margin-top:clamp(32px,5vw,56px);display:flex;flex-direction:column;align-items:stretch;gap:0}
 .node{padding:22px 24px;border-radius:18px;border:1px solid var(--line);background:var(--card);text-align:center;font:600 18px/1.3 var(--head)}
 .node small{display:block;margin-top:6px;font:400 14px/1.4 'Golos Text',sans-serif;color:var(--mute)}
@@ -214,9 +232,11 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 .xray__grid{margin-top:clamp(32px,5vw,56px);display:grid;gap:clamp(28px,4vw,56px);grid-template-columns:1fr}
 @media(min-width:960px){.xray__grid{grid-template-columns:1.15fr .85fr;align-items:start}}
 .list{border-radius:22px;background:var(--card);border:1px solid var(--line);padding:18px;display:flex;flex-direction:column;gap:10px;box-shadow:0 40px 80px -44px rgba(14,33,31,.4)}
+.list__top{display:flex;align-items:center;gap:12px;padding:2px 4px 10px;border-bottom:1px solid var(--line);margin-bottom:4px;font:600 15px/1 'Golos Text',sans-serif}
+.list__top img{width:30px;height:30px;border-radius:50%}
 .list__tag{font:600 11px/1.3 'Golos Text',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);padding:2px 4px 6px}
 .list .row{opacity:.5;padding:12px 14px}
-.cv{border:1.5px solid var(--gold);border-radius:16px;padding:20px 18px;background:var(--bg);display:flex;flex-direction:column;gap:14px;box-shadow:0 0 0 6px rgba(201,162,39,.12)}
+.cv{border:1.5px solid #0A6BFF;border-radius:16px;padding:20px 18px;background:var(--bg);display:flex;flex-direction:column;gap:14px;box-shadow:0 0 0 6px rgba(10,107,255,.10)}
 .cv dt{font:600 11px/1.3 'Golos Text',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
 .cv dd{margin:3px 0 0;font-size:16px}
 .cv dd.pos{font:600 22px/1.2 var(--head)}
@@ -341,24 +361,40 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 <section class="pain" id="pain" aria-labelledby="h1">
   <div class="pain__in">
     <h1 id="h1">Вы отправили десятки откликов. В&nbsp;ответ <em>тишина или отказ через несколько секунд</em></h1>
-      <div class="rig" role="img" aria-label="Компьютер: на мониторе открыта страница вакансии, соискатель нажимает «Откликнуться» и сразу получает автоматический отказ">
-        <div class="mon">
-          <div class="mon__bar"><i></i><i></i><i></i><span class="url">vacancy / руководитель-отдела-продаж</span></div>
-          <div class="mon__page">
-            <div class="nav"><span class="nav__dot"></span><span class="nav__ln"></span><span class="nav__ln nav__ln--s"></span></div>
-            <div class="vac">
-              <p class="vac__t">Руководитель отдела продаж</p>
-              <p class="vac__s">от 150 000 ₽ за месяц, до вычета налогов</p>
-              <p class="vac__m">Опыт работы: 3–6 лет · Полная занятость</p>
-              <p class="vac__m">Сейчас эту вакансию смотрят 6 человек</p>
-              <div class="vac__btns"><span class="b1">Откликнуться</span><span class="b2">Контакты</span></div>
+      <div class="lap" role="img" aria-label="Ноутбук: на экране страница вакансии в интерфейсе hh, соискатель нажимает «Откликнуться» и сразу получает автоматический отказ">
+        <div class="lap__lid">
+          <div class="hh">
+            <div class="hh__top">
+              <img class="hh__logo" src="img/hh-logo.webp" width="80" height="80" alt="">
+              <span class="hh__tg"><b>Ищу работу</b><span>Ищу сотрудника</span></span>
+              <span class="hh__nav">Сервисы</span><span class="hh__nav">Помощь</span><span class="hh__sp"></span>
+              <span class="hh__login">Войти</span><span class="hh__cr">Создать резюме</span>
+            </div>
+            <div class="hh__body">
+              <div class="hh__card">
+                <p class="hh__t">Руководитель отдела продаж</p>
+                <p class="hh__s">от 150 000 ₽ за месяц, до вычета налогов</p>
+                <p class="hh__m">Опыт работы: 3–6 лет</p>
+                <p class="hh__m">Полная занятость</p>
+                <p class="hh__m hh__m--l">Сейчас эту вакансию смотрят 6 человек</p>
+                <div class="hh__btns">
+                  <span class="b1">Откликнуться
+                    <svg class="cur" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2l14 9-6.2 1.4L16 19l-3 1.3-3.2-6.4L5 18z" fill="#fff" stroke="#111" stroke-width="1.4" stroke-linejoin="round"/></svg>
+                  </span>
+                  <span class="b2">Контакты</span><span class="b3">♡</span>
+                </div>
+              </div>
+              <div class="hh__side">
+                <p class="hh__co">Компания-работодатель</p>
+                <div class="hh__it"><i></i><span><b>Открытый</b><small>Показывает отзывы сотрудников</small></span></div>
+                <div class="hh__it"><i></i><span><b>Рейтинг работодателей</b><small>Лидер отрасли</small></span></div>
+              </div>
             </div>
             <div class="toast t1">Отклик отправлен</div>
             <div class="toast t2"><b>Отказ</b><span>Прошло 5 секунд</span></div>
-            <svg class="cur" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2l14 9-6.2 1.4L16 19l-3 1.3-3.2-6.4L5 18z" fill="#fff" stroke="#111" stroke-width="1.4" stroke-linejoin="round"/></svg>
           </div>
         </div>
-        <div class="stand"></div><div class="foot-b"></div>
+        <div class="lap__base"></div>
       </div>
       <div class="chat" id="chat">
         <p class="msg">Отправил 50 откликов. Тишина.</p>
@@ -397,7 +433,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
   <div class="wrap offer__in">
     <div>
       <p class="eyebrow">Мастер-класс · 31 октября · онлайн</p>
-      <h2 class="title" id="h-offer">Достучаться до&nbsp;HH</h2>
+      <h2 class="title" id="h-offer">Достучаться <span class="nw">до&nbsp;<img class="ttl-hh" src="img/hh-logo.webp" width="80" height="80" alt="hh"></span></h2>
       <p class="sub">Покажу, что эйчар видит вместо вашего отклика</p>
       <p class="txt">Правила закрыты, как в лотерее. Вы отправляете отклик и не знаете, что с ним происходит. На мастер-классе вы откликнетесь на вакансию под вашу должность, а я покажу, как этот отклик выглядит на экране работодателя, почему на него молчат и что поменять.</p>
       <ul class="facts">
@@ -434,6 +470,10 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 <section class="sec mech" id="mech" aria-labelledby="h-mech">
   <div class="wrap">
     <h2 id="h-mech">С той стороны экрана</h2>
+    <figure class="ph">
+      <img src="https://cdn.gamma.app/f2etv6mzt3jbknl/design-anything/hTVBTvGbMIvvn7H8NprUM/r8k5ZxFDbtbNrrVGRPNft.jpg" width="1376" height="768" alt="HR-специалист за компьютером листает отклики на сайте вакансий" loading="lazy" decoding="async">
+      <figcaption>Так выглядит ваш отклик для эйчара: один из сотен, на экране, за секунды</figcaption>
+    </figure>
     <div class="flow" aria-label="Схема: ваш отклик, экран эйчара, разбор и правки">
       <div class="node">Ваш отклик<small>на учебную вакансию</small></div>
       <span class="link" aria-hidden="true"></span>
@@ -445,8 +485,8 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
       <li><span class="d">Сразу после оплаты</span><p><b>Вы записываетесь и заполняете анкету:</b> должность, отрасль, резюме, зарплатные ожидания.</p></li>
       <li><span class="d">После анкеты</span><p><b>Я публикую учебную вакансию</b> под вашу должность (в базовом тарифе — под ваше направление, в персональном — под точную). Найм по ней не ведётся.</p></li>
       <li><span class="d">Ваш шаг</span><p><b>Вы откликаетесь</b> со своим сопроводительным, как на обычную вакансию.</p></li>
-      <li><span class="d">29–30 октября</span><p><b>Я показываю скрины</b> вашего отклика в интерфейсе работодателя и пишу разбор: что видно сразу, стоп-факторы и правки.</p></li>
-      <li><span class="d">31 октября</span><p><b>Живая встреча.</b> Типичные ошибки на обезличенных примерах и ответы на ваши вопросы.</p></li>
+      <li><span class="d">29–30 октября</span><p><b>Я готовлю отчёт:</b> скрины вашего отклика в интерфейсе работодателя, что видно сразу, стоп-факторы и правки.</p></li>
+      <li><span class="d">31 октября</span><p><b>Живая встреча.</b> Присылаю вам отчёт со скринами, разбираю типичные ошибки на обезличенных примерах и отвечаю на ваши вопросы.</p></li>
     </ol>
     <p class="note">Вакансия учебная: найм по ней не ведётся, вы откликаетесь осознанно, чтобы увидеть свой отклик глазами работодателя.</p>
   </div>
@@ -458,6 +498,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
     <h2 id="h-xray">Отклик под рентгеном</h2>
     <div class="xray__grid">
       <div class="list" aria-label="Стилизованный список откликов, один открыт и помечен тремя отметками">
+        <div class="list__top"><img src="img/hh-logo.webp" width="80" height="80" alt=""><span>Отклики на вакансию</span></div>
         <div class="list__tag">Учебный пример, вымышленный кандидат</div>
         <div class="row"><span class="av"></span><span class="ln"><i></i><i></i></span></div>
         <dl class="cv" style="margin:0">
@@ -490,7 +531,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
   <div class="wrap">
     <h2 id="h-gain">Отклик без тишины</h2>
     <ul class="gain__list">
-      <li><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#E7C766" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="13" r="11"/><path d="M7.5 13.5l4 4 7-8"/></svg><p><b>Увидите свой отклик так, как его видит эйчар</b><span>Скрины из интерфейса работодателя.</span></p></li>
+      <li><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#E7C766" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="13" r="11"/><path d="M7.5 13.5l4 4 7-8"/></svg><p><b>Увидите свой отклик так, как его видит эйчар</b><span>Скрины из интерфейса работодателя в вашем отчёте.</span></p></li>
       <li><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#E7C766" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="13" r="11"/><path d="M7.5 13.5l4 4 7-8"/></svg><p><b>Поймёте, где он теряется</b><span>В резюме, в письме или в соответствии вакансии.</span></p></li>
       <li><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#E7C766" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="13" r="11"/><path d="M7.5 13.5l4 4 7-8"/></svg><p><b>Получите правки</b><span>И переписанное начало сопроводительного.</span></p></li>
       <li><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#E7C766" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="13" r="11"/><path d="M7.5 13.5l4 4 7-8"/></svg><p><b>Узнаете, как устроен отбор</b><span>На живой встрече, и сможете задать вопрос.</span></p></li>
@@ -527,6 +568,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
           <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Учебная вакансия под вашу точную должность и отрасль</li>
           <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Голосовой разбор от меня на 5–7 минут</li>
           <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Повторный отклик после правок в течение 48 часов</li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Отчёт с рекомендациями</li>
         </ul>
         <a class="btn btn--block btn--gold" href="#" data-pay="pro" data-goal="tariff_pro">Записаться за 11&nbsp;900&nbsp;₽</a>
         <p class="seats" data-seats="pro"></p>
@@ -564,15 +606,15 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
         <ul>
           <li><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5l5 5 9-10"/></svg>вы сейчас откликаетесь на вакансии;</li>
           <li><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5l5 5 9-10"/></svg>хотите понять, почему молчат;</li>
-          <li><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5l5 5 9-10"/></svg>готовы услышать честный разбор.</li>
+          <li><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5l5 5 9-10"/></svg>готовы услышать честный разбор;</li>
+          <li><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5l5 5 9-10"/></svg>вы пока не ищете работу — мастер-класс тоже подойдёт: поймёте, как вас видит работодатель, и будете готовы заранее.</li>
         </ul>
       </div>
       <div class="fit__col fit__no">
         <h3>Не подойдёт, если</h3>
         <ul>
           <li><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l12 12M17 5L5 17"/></svg>ждёте гарантии приглашений или оффера;</li>
-          <li><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l12 12M17 5L5 17"/></svg>хотите, чтобы опыт «красиво прикрасили»;</li>
-          <li><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l12 12M17 5L5 17"/></svg>пока не ищете работу.</li>
+          <li><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l12 12M17 5L5 17"/></svg>хотите, чтобы опыт «красиво прикрасили».</li>
         </ul>
       </div>
     </div>
@@ -589,7 +631,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
       <details><summary>Мне будут «красиво приписывать» опыт?</summary><p>Нет. Правки только по фактам: формулировки, порядок, акценты. Чего не было в вашем опыте, в отклике не появится.</p></details>
       <details><summary>Что с моими данными?</summary><p>Резюме и отклик видите только вы и я. Примеры на встрече обезличиваю и показываю только с вашего согласия.</p></details>
       <details><summary>Не смогу быть на встрече 31 октября.</summary><p>Запись придёт вам после встречи, а личный разбор вы получите в любом случае.</p></details>
-      <details><summary>Чем отличаются тарифы?</summary><p>В базовом вы откликаетесь на вакансию вашего направления. В персональном я публикую вакансию под вашу точную должность, записываю голосовой разбор и проверяю отклик ещё раз после правок.</p></details>
+      <details><summary>Чем отличаются тарифы?</summary><p>В базовом вы откликаетесь на вакансию вашего направления. В персональном я публикую вакансию под вашу точную должность, записываю голосовой разбор проверяю отклик ещё раз после правок и готовлю отчёт с рекомендациями.</p></details>
       <details><summary>У меня нестандартная должность, подойдёт ли?</summary><p>Тогда берите персональный тариф: вакансия будет под вашу точную роль.</p></details>
     </div>
   </div>
@@ -598,7 +640,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 <!-- 11. ФИНАЛ -->
 <section class="sec fin" id="final" aria-labelledby="h-fin">
   <div class="wrap">
-    <h2 id="h-fin">Отклик без тишины начинается с того, что вы увидите его со стороны</h2>
+    <h2 id="h-fin">Путь к офферу начинается с того, что вы готовы взглянуть на себя со стороны</h2>
     <p>Мест мало, потому что каждый отклик я разбираю лично.</p>
     <a class="btn btn--gold" href="#tariffs" data-goal="cta_final">Выбрать формат</a>
   </div>
