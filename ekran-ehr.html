@@ -94,6 +94,8 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 .pain h1{max-width:18ch;font:600 clamp(30px,5.6vw,64px)/1.08 var(--head);letter-spacing:-.015em;text-wrap:balance}
 .pain h1 em{font-style:normal;color:var(--hh-bright)}
 .chat{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.chat .msg{position:relative;margin-left:42px}
+.chat .msg::before{content:"";position:absolute;left:-42px;bottom:0;width:32px;height:32px;border-radius:50%;background:radial-gradient(circle at 50% 36%,#8A6F73 0 21%,transparent 22%),radial-gradient(ellipse at 50% 108%,#8A6F73 0 44%,transparent 45%),#2D1B1E;border:1px solid #4A2A2F}
 .msg{max-width:min(100%,460px);padding:13px 18px;border-radius:4px 20px 20px 20px;background:var(--night2);border:1px solid #3A1A1F;border-left:3px solid var(--hh);font-size:clamp(16px,1.8vw,18px);line-height:1.45;color:#F4ECEC}
 .msg--last{background:var(--hh);border-color:var(--hh);color:#fff;font-weight:500;box-shadow:0 14px 40px -14px rgba(214,0,28,.8)}
 .js .msg{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
@@ -259,6 +261,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 .cv dd{margin:3px 0 0;font-size:16px}
 .cv dd.pos{font:600 22px/1.2 var(--head)}
 .cv blockquote{font-style:italic;color:var(--ink);padding-left:12px;border-left:3px solid var(--hh)}
+.hl{background:linear-gradient(transparent 55%,rgba(214,0,28,.38) 55%);color:inherit;padding:0 2px;border-radius:2px;text-decoration:underline wavy var(--hh);text-underline-offset:3px;text-decoration-thickness:1.5px}
 .m{display:inline-grid;place-items:center;width:24px;height:24px;margin-left:8px;border-radius:50%;background:var(--hh);color:#fff;font:600 13px/1 'Golos Text',sans-serif;vertical-align:2px;flex:none}
 .legend{display:flex;flex-direction:column;gap:14px}
 .legend li{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start;padding:16px 18px;border-radius:14px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--hh);font-size:16px}
@@ -266,6 +269,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 .fix{margin-top:6px;padding:20px 20px 22px;border-radius:16px;background:var(--teal);color:#fff}
 .fix .eyebrow{color:#BFE8E1}
 .fix p{margin-top:8px;font-size:16px}
+.ba{display:grid;grid-template-columns:20px 1fr;gap:10px;align-items:start}.ba svg{margin-top:3px}
 .fix s{opacity:.8;text-decoration-color:var(--hh-bright);text-decoration-thickness:2px}
 .fix b{font-weight:500;color:#fff}
 .xray__cap{margin-top:28px;color:var(--mute);max-width:65ch}
@@ -284,6 +288,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 
 /* ───── 7. ТАРИФЫ ───── */
 .tar h2{max-width:14ch}
+.tar__anchor{margin-top:20px;padding:16px 20px;border-left:3px solid var(--gold);background:var(--bg2);border-radius:0 12px 12px 0;color:var(--ink);max-width:65ch;font-size:16px}
 .tar__grid{margin-top:clamp(32px,5vw,56px);display:grid;gap:20px;grid-template-columns:1fr}
 @media(min-width:860px){.tar__grid{grid-template-columns:1fr 1fr;gap:28px}}
 .plan{position:relative;display:flex;flex-direction:column;padding:30px 26px 28px;border-radius:22px;background:var(--card);border:1px solid var(--line)}
@@ -297,7 +302,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 .plan li svg{margin-top:4px;color:var(--teal)}
 .tar__note{margin-top:28px;color:var(--mute);max-width:65ch}
 .tar__note b{color:var(--ink);font-weight:500}
-.seats{display:none;margin-top:12px;text-align:center;font-size:14px;font-weight:500;color:var(--mute)}
+.seats{display:none;margin-top:12px;text-align:center;font-size:15px;font-weight:600;color:var(--ink)}
 
 /* ───── 8. АВТОР ───── */
 .who{background:var(--bg2)}
@@ -310,6 +315,12 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 .who li{padding-left:18px;position:relative;max-width:60ch}
 .who li::before{content:"";position:absolute;left:0;top:.7em;width:7px;height:7px;border-radius:50%;background:var(--gold)}
 
+/* ───── отзыв ───── */
+.rev__grid{margin-top:clamp(28px,4vw,48px);display:grid;gap:20px;grid-template-columns:1fr;align-items:start}
+@media(min-width:760px){.rev__grid{grid-template-columns:1fr 1fr;gap:28px}}
+.rev__grid figure{margin:0;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 60px -40px rgba(14,33,31,.4)}
+.rev__grid img{width:100%;height:auto}
+.rev__note{margin-top:22px;color:var(--mute);font-size:15px;max-width:65ch}
 /* ───── 9. ДЛЯ КОГО ───── */
 .fit__grid{margin-top:clamp(28px,4vw,48px);display:grid;gap:20px;grid-template-columns:1fr}
 @media(min-width:760px){.fit__grid{grid-template-columns:1fr 1fr}}
@@ -480,7 +491,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
         <li>Запись встречи включена</li>
         <li>Разбор вашего отклика от 5&nbsp;900&nbsp;₽</li>
       </ul>
-      <a class="btn" href="#tariffs" data-goal="cta_offer">Выбрать формат</a>
+      <a class="btn" href="#tariffs" data-goal="cta_offer">Посмотреть отклик глазами HR</a>
     </div>
     <figure class="shot">
       <div class="shot__bar"><i></i><i></i><i></i><span>hh.ru / отклики на вакансию</span></div>
@@ -520,7 +531,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
     </div>
     <ol class="steps">
       <li><span class="d">Сразу после оплаты</span><p><b>Вы заполняете анкету:</b> должность, отрасль, резюме, зарплатные ожидания.</p></li>
-      <li><span class="d">После анкеты</span><p><b>Я публикую учебную вакансию</b> под вашу должность (в базовом тарифе — под ваше направление, в персональном — под точную). Найм по ней не ведётся.</p></li>
+      <li><span class="d">После анкеты</span><p><b>Я публикую учебную вакансию</b> под вашу должность (в базовом тарифе — под ваше направление, в персональном — под точную). Найм по ней не ведётся. Вакансия собирательная, но с реальными требованиями и ключевыми словами направления: вы увидите, как ваш отклик выглядит рядом с другими и насколько совпадает с требованиями.</p></li>
       <li><span class="d">Ваш шаг</span><p><b>Вы откликаетесь</b> со своим сопроводительным, как на обычную вакансию.</p></li>
       <li><span class="d">31 октября, 11:00 мск</span><p><b>Живая встреча.</b> Присылаю вам отчёт со скринами, разбираю типичные ошибки на обезличенных примерах и отвечаю на ваши вопросы.</p></li>
     </ol>
@@ -541,7 +552,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
           <div><dt>Должность</dt><dd class="pos">Руководитель отдела продаж</dd></div>
           <div><dt>Места работы</dt><dd>Дистрибьюция · Производство · Розница</dd></div>
           <div><dt>Навыки</dt><dd>управление продажами, переговоры, CRM, отчётность<span class="m" aria-label="пометка 3">3</span></dd></div>
-          <div><dt>Начало сопроводительного</dt><dd><blockquote>«Здравствуйте! Меня заинтересовала ваша вакансия, мой опыт полностью ей соответствует…»<span class="m" aria-label="пометки 1 и 2">1</span><span class="m" aria-hidden="true">2</span></blockquote></dd></div>
+          <div><dt>Начало сопроводительного</dt><dd><blockquote>«Здравствуйте! Меня заинтересовала ваша вакансия, <mark class="hl">мой опыт полностью ей соответствует…</mark>»<span class="m" aria-label="пометки 1 и 2">1</span><span class="m" aria-hidden="true">2</span></blockquote></dd></div>
         </dl>
         <div class="row"><span class="av"></span><span class="ln"><i></i><i></i></span></div>
       </div>
@@ -553,8 +564,8 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
         </ol>
         <div class="fix" style="margin-top:20px">
           <span class="eyebrow">Правка</span>
-          <p><s>Было: «Мой опыт полностью соответствует…»</s></p>
-          <p><b>Стало:</b> «В прошлой компании я перестроил воронку продаж, и план перестал зависеть от двух крупных клиентов. Ваша задача похожа…»</p>
+          <p class="ba ba--no"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#FF8A98" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 4l10 10M14 4L4 14"/></svg><span><s>Было: «Мой опыт полностью соответствует…»</s></span></p>
+          <p class="ba ba--ok"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#8DF0B5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg><span><b>Стало:</b> «В прошлой компании я перестроил воронку продаж, и план перестал зависеть от двух крупных клиентов. Ваша задача похожа…»</span></p>
         </div>
       </div>
     </div>
@@ -580,6 +591,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 <section class="sec tar" id="tariffs" aria-labelledby="h-tar">
   <div class="wrap">
     <h2 id="h-tar">Выберите формат</h2>
+    <p class="tar__anchor">Полноценный карьерный аудит и переупаковка резюме в моей личной работе стоят от 25&nbsp;000&nbsp;₽. На мастер-классе вы получаете мою экспертизу и точечные правки по вашему конкретному отклику — от 5&nbsp;900&nbsp;₽.</p>
     <div class="tar__grid">
       <article class="plan">
         <h3>Базовый</h3>
@@ -635,6 +647,20 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
   </div>
 </section>
 
+<!-- 8а. ОТЗЫВ -->
+<section class="sec rev" id="reviews" aria-labelledby="h-rev">
+  <div class="wrap">
+    <p class="eyebrow">Из личной переписки</p>
+    <h2 id="h-rev">Что получается после правок резюме на hh</h2>
+    <p class="lead" style="margin-top:18px">Сообщения человека, который исправил резюме на hh по моим рекомендациям. Это не отзыв об этом мастер-классе, а пример того, как правки влияют на видимость.</p>
+    <div class="rev__grid">
+      <figure><img src="img/review-1.webp" width="540" height="426" alt="Сообщение: после правок резюме выросла конверсия на hh, работодатели нашли сами" loading="lazy" decoding="async"></figure>
+      <figure><img src="img/review-2.webp" width="522" height="266" alt="Сообщение: 5–7 просмотров резюме в неделю, 4 компании пришли сами с hh" loading="lazy" decoding="async"></figure>
+    </div>
+    <p class="rev__note">Опубликовано анонимно с согласия автора. Результат у каждого свой, приглашений на собеседования я не обещаю.</p>
+  </div>
+</section>
+
 <!-- 9. ДЛЯ КОГО -->
 <section class="sec fit" id="fit" aria-labelledby="h-fit">
   <div class="wrap">
@@ -665,6 +691,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
   <div class="wrap">
     <h2 id="h-faq">Вопросы</h2>
     <div class="faq__list">
+      <details><summary>Увидит ли мой текущий работодатель, что я откликаюсь?</summary><p>Откликаетесь вы на мою учебную вакансию, и отклик получаю я. Анкету и резюме видим только мы с вами, на странице и в соцсетях я их не публикую. Если хотите подстраховаться, в настройках видимости резюме на hh можно скрыть его от выбранных компаний. Это настройка самой площадки, и если вопрос для вас критичный, напишите мне до оплаты, обсудим.</p></details>
       <details><summary>Вы обещаете приглашения после разбора?</summary><p>Нет. Я показываю, как выглядит ваш отклик и что в нём поменять. Решение принимает работодатель.</p></details>
       <details><summary>Значит, вакансия ненастоящая?</summary><p>Она учебная, и я об этом говорю прямо: найм по ней не ведётся. Вы откликаетесь осознанно.</p></details>
       <details><summary>Мне будут приукрашивать опыт?</summary><p>Нет. Правки только по фактам: формулировки, порядок, акценты. Чего не было в вашем опыте, в отклике не появится.</p></details>
@@ -733,7 +760,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
     el.style.display = 'block';
     el.style.cssText += ';margin-top:12px;text-align:center;font-size:14px;color:var(--mute)';
     if(n > 0){
-      el.textContent = 'Мест в этом тарифе: ' + n;
+      el.textContent = 'Строгий лимит: ' + n + ' ' + (n===1?'место':(n<5?'места':'мест'));
     } else {
       el.textContent = 'Места закончились';
       var b = el.parentNode.querySelector('.btn');
