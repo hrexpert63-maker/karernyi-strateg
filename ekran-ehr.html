@@ -299,6 +299,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 .plan .for{margin-top:12px;color:var(--mute);font-size:16px}
 .plan ul{margin:22px 0 26px;display:flex;flex-direction:column;gap:11px;flex:1}
 .plan li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:16px}
+.plan li.bonus{padding:10px 12px;border-radius:12px;background:rgba(201,162,39,.14)}
 .plan li svg{margin-top:4px;color:var(--teal)}
 .tar__docs{margin-top:24px;color:var(--mute);font-size:14px;max-width:65ch}
 .tar__docs a{color:var(--link)}
@@ -323,6 +324,8 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
 @media(min-width:1060px){.rev__grid{grid-template-columns:1fr 1fr 1fr}}
 .rev__grid figure{margin:0;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 60px -40px rgba(14,33,31,.4)}
 .rev__grid img{width:100%;height:auto}
+.rev__more{margin-top:24px;font-size:17px}
+.rev__more a{font-weight:600}
 .rev__note{margin-top:22px;color:var(--mute);font-size:15px;max-width:65ch}
 /* ───── 9. ДЛЯ КОГО ───── */
 .fit__grid{margin-top:clamp(28px,4vw,48px);display:grid;gap:20px;grid-template-columns:1fr}
@@ -621,6 +624,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
           <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Повторный отклик после правок в течение 48 часов</li>
           <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg><span><b>Подробный отчёт:</b> ключевые слова и полный разбор вашего профиля на hh — что улучшить, чтобы повысить видимость и конверсию</span></li>
           <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg>Точечные рекомендации по каждому разделу профиля</li>
+          <li class="bonus"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg><span><b>Бонус:</b> вебинар «ИИ как напарник в поиске работы»</span></li>
         </ul>
         <a class="btn btn--block btn--gold" href="#" data-pay="pro" data-goal="tariff_pro">Записаться за 11&nbsp;900&nbsp;₽</a>
         <p class="seats" data-seats="pro"></p>
@@ -660,6 +664,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
       <figure><img src="img/review-2.webp" width="522" height="266" alt="Сообщение: 5–7 просмотров резюме в неделю, 4 компании пришли сами с hh" loading="lazy" decoding="async"></figure>
       <figure><img src="img/review-3.webp" width="600" height="154" alt="Сообщение: 2 отклика из 5 резюме, иду по шагам вашего модуля" loading="lazy" decoding="async"></figure>
     </div>
+    <p class="rev__more">Больше отзывов здесь: <a href="https://t.me/hrexpert63_feedback" target="_blank" rel="noopener">t.me/hrexpert63_feedback</a></p>
   </div>
 </section>
 
@@ -699,7 +704,7 @@ h2{font:600 clamp(28px,5vw,52px)/1.12 var(--head);letter-spacing:-.01em;text-wra
       <details><summary>Мне будут приукрашивать опыт?</summary><p>Нет. Правки только по фактам: формулировки, порядок, акценты. Чего не было в вашем опыте, в отклике не появится.</p></details>
       <details><summary>Что с моими данными?</summary><p>Резюме и отклик видите только вы и я. Примеры на встрече обезличиваю и показываю только с вашего согласия.</p></details>
       <details><summary>Не смогу быть на встрече 31 октября.</summary><p>Запись придёт вам после встречи, а личный разбор вы получите в любом случае.</p></details>
-      <details><summary>Чем отличаются тарифы?</summary><p>В базовом вы откликаетесь на вакансию вашего направления. В персональном я публикую вакансию под вашу точную должность, проверяю отклик ещё раз после правок и готовлю подробный отчёт: ключевые слова, полный разбор вашего профиля на hh и точечные рекомендации, что улучшить для видимости и конверсии. Мест в персональном тарифе — 5.</p></details>
+      <details><summary>Чем отличаются тарифы?</summary><p>В базовом вы откликаетесь на вакансию вашего направления. В персональном я публикую вакансию под вашу точную должность, проверяю отклик ещё раз после правок и готовлю подробный отчёт: ключевые слова, полный разбор вашего профиля на hh и точечные рекомендации, что улучшить для видимости и конверсии. В подарок к Персональному тарифу идёт бонус — вебинар «ИИ как напарник в поиске работы». Мест в персональном тарифе — 5.</p></details>
       <details><summary>У меня нестандартная должность, подойдёт ли?</summary><p>Тогда берите персональный тариф: вакансия будет под вашу точную роль.</p></details>
     </div>
   </div>
